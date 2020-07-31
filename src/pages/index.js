@@ -22,7 +22,7 @@ export default class Home extends React.Component {
         <Waypoint onEnter={() => this.updateFocus('welcome')} />
         <Welcome focus={this.state.focus === 'welcome'} />
         <Waypoint onEnter={() => this.updateFocus('about')} />
-        <Welcome focus={this.state.focus === 'about'} />
+        <About focus={this.state.focus === 'about'} />
         <Waypoint onEnter={() => this.updateFocus('projects')} />
         <Welcome focus={this.state.focus === 'projects'} />
       </Layout>
