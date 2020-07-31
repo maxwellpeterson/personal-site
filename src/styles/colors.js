@@ -1,8 +1,7 @@
-export const HEADER_TEXT = '#000000'
-export const HEADER_ALT = '#ffffff'
+// Work in progress...
 
 /*
-Some other colors:
+Some colors:
 - #222222 very dark grey
 - #f0f0f0 very light grey
 - #b53c31 flat red

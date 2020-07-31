@@ -6,7 +6,7 @@ import { HEADER_TEXT, HEADER_ALT } from '../styles/colors'
 import { Background } from "../styles/components/background";
 
 const HeaderBackground = styled(Background) `
-  background-color: ${HEADER_ALT};
+  background-color: white;
   position: fixed;
   width: 100%;
 `
@@ -27,13 +27,13 @@ const StyledLink = styled(Link)`
   font-family: 'Cooper Hewitt';
   font-size: 32px;
   font-weight: 300;
-  color: ${HEADER_TEXT};
+  color: black;
   text-decoration: none;
   white-space: nowrap;
   transition: all 0.25s;
   &:hover {
-    color: ${HEADER_ALT};
-    background: ${HEADER_TEXT};
+    color: white;
+    background: black;
   }
 `
 
