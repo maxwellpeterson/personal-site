@@ -15,10 +15,18 @@ const FooterContent = styled.div`
 
 const Footnote = styled.p`
   padding 25px 25px;
-  font-family: 'Cooper Hewitt';
   font-size: 20px;
-  font-weight: 300;
   color: white;
+`
+
+const GitHubLink = styled.a`
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.25s;
+  &:hover {
+    color: darkviolet;
+  }
 `
 
 const text = `
@@ -30,7 +38,11 @@ export default function Footer() {
     <FooterBackground>
       <FooterContent>
         <Footnote>
-          {text}
+          Designed and built by Max Peterson. Source at{' '}
+          <GitHubLink href="https://github.com/maxwellpeterson" target="_blank">
+            GitHub
+          </GitHubLink>
+          .
         </Footnote>
       </FooterContent>
     </FooterBackground>
