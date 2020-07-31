@@ -14,9 +14,17 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.23.12",
+    "gatsby-plugin-styled-components": "^3.3.10",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-waypoint": "^9.0.3",
+    "styled-components": "^5.1.1",
+    "styled-normalize": "^8.0.7",
+    "typeface-aleo": "0.0.69",
+    "typeface-cooper-hewitt": "0.0.44",
+    "typeface-lato": "0.0.75"
   },
   "devDependencies": {
     "prettier": "2.0.5"
