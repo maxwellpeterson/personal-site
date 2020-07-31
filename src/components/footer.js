@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import "typeface-cooper-hewitt"
 import { Background } from "../styles/components/background"
 
 const FooterBackground = styled(Background)`
@@ -27,10 +26,6 @@ const GitHubLink = styled.a`
   &:hover {
     color: darkviolet;
   }
-`
-
-const text = `
-  Designed and built by Max Peterson.
 `
 
 export default function Footer() {

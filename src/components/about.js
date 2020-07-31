@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import "typeface-cooper-hewitt"
 import { Background } from "../styles/components/background";
 import { Content } from '../styles/components/content'
 

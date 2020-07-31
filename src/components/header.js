@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import "typeface-cooper-hewitt"
 import { Background } from "../styles/components/background";
 
 const HeaderBackground = styled(Background) `
