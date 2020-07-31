@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import "typeface-cooper-hewitt"
-import { HEADER_TEXT, HEADER_ALT } from '../styles/colors'
 import { Background } from "../styles/components/background";
 
 const HeaderBackground = styled(Background) `
@@ -24,9 +23,7 @@ const LinkContainer = styled.div`
 
 const StyledLink = styled(Link)`
   padding 25px 25px;
-  font-family: 'Cooper Hewitt';
   font-size: 32px;
-  font-weight: 300;
   color: black;
   text-decoration: none;
   white-space: nowrap;

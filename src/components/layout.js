@@ -5,11 +5,11 @@ import GlobalStyle from "../styles/global-style"
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <>
       <GlobalStyle />
       <Header />
       {children}
       <Footer />
-    </div>
+    </>
   )
 }
