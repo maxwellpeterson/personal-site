@@ -4,7 +4,7 @@ import styled from "styled-components"
 const SectionTitle = styled.span`
   font-size: 48px;
   padding-bottom: 10px;
-  border-bottom: 2px solid ${props => props.underlineColor};
+  border-bottom: 2px solid ${props => props.underlineColor || 'black'};
   display: block;
   width: 100%;
 `

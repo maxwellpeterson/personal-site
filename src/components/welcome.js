@@ -13,7 +13,6 @@ const WelcomeContent =  styled(Content)`
 `
 
 const StyledMessage = styled.p`
-  padding: 25px 25px;
   font-size: 32px;
   color: ${props => props.focus ? 'black' : 'white'};
   transition: all 0.5s;
