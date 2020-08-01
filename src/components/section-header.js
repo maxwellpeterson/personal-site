@@ -11,10 +11,8 @@ const SectionTitle = styled.span`
 
 export default function SectionHeader({ title, underlineColor }) {
   return (
-    <>
-      <SectionTitle underlineColor={underlineColor}>
-        {title}
-      </SectionTitle>
-    </>
+    <SectionTitle underlineColor={underlineColor}>
+      {title}
+    </SectionTitle>
   )
 }
