@@ -3,6 +3,8 @@ import Layout from "../components/layout"
 import Welcome from "../components/welcome"
 import About from "../components/about";
 import { Waypoint } from "react-waypoint";
+import Experience from "../components/experience";
+import Projects from "../components/projects";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -19,13 +21,13 @@ export default class Home extends React.Component {
   render() {
     return (
       <Layout>
-        <Waypoint onEnter={() => this.updateFocus('welcome')} />
         <Welcome focus={this.state.focus === 'welcome'} />
-        <Waypoint onEnter={() => this.updateFocus('about')} />
         <About focus={this.state.focus === 'about'} />
-        <Waypoint onEnter={() => this.updateFocus('projects')} />
-        <Welcome focus={this.state.focus === 'projects'} />
+        <Projects />
+        <Experience focus={this.state.focus === 'projects'} />
       </Layout>
     )
   }
 }
+
+// <Waypoint onEnter={() => this.updateFocus('welcome')} />
