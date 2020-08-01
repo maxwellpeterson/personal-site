@@ -23,6 +23,7 @@
     "styled-components": "^5.1.1",
     "styled-normalize": "^8.0.7",
     "typeface-aleo": "0.0.69",
+    "typeface-clear-sans": "0.0.44",
     "typeface-cooper-hewitt": "0.0.44",
     "typeface-lato": "0.0.75"
   },
