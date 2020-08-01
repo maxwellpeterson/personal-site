@@ -6,7 +6,6 @@ import { Background } from "../styles/components/background";
 const HeaderBackground = styled(Background) `
   background-color: white;
   position: fixed;
-  width: 100%;
 `
 
 const HeaderContent = styled.div`
