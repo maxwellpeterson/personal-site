@@ -5,10 +5,6 @@ import { Content } from "../styles/components/content"
 import SectionHeader from "./section-header"
 import SectionBody from "./section-body"
 
-const text = `
-  I am a platapus.
-`
-
 export default function Experience({ focus }) {
   return (
     <Background>
