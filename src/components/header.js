@@ -53,13 +53,11 @@ export default function Header() {
           Max Peterson
         </StyledLink>
         <LinkContainer>
-          {pages.map(page =>{
-            return (
-              <StyledLink to={page.path} key={page.title}>
-                {page.title}
-              </StyledLink>
-            )
-          })}
+          {pages.map(page => (
+            <StyledLink to={page.path} key={page.title}>
+              {page.title}
+            </StyledLink>
+          ))}
         </LinkContainer>
       </HeaderContent>
     </HeaderBackground>

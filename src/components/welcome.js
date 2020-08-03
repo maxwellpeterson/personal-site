@@ -28,13 +28,11 @@ export default function Welcome({ focus }) {
   return (
     <WelcomeBackground focus={focus}>
       <WelcomeContent>
-        {text.map(msg => {
-          return (
-            <StyledMessage focus={focus} key={msg}>
-              {msg}
-            </StyledMessage>
-          )
-        })}
+        {text.map(msg => (
+          <StyledMessage focus={focus} key={msg}>
+            {msg}
+          </StyledMessage>
+        ))}
       </WelcomeContent>
     </WelcomeBackground>
   )

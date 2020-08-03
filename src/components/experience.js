@@ -37,11 +37,9 @@ export default function Experience({ focus }) {
       <Content>
         <SectionHeader title="Experience" />
         <SectionBody text="Put experience here." />
-        {experienceEntries.map(entry => {
-          return (
-            <ExperienceEntry key={entry.organization + entry.duration} {...entry} />
-          )
-        })}
+        {experienceEntries.map(entry => (
+          <ExperienceEntry key={entry.organization + entry.duration} {...entry} />
+        ))}
       </Content>
     </Background>
   )
