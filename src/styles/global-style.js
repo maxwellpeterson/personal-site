@@ -8,7 +8,7 @@ export default createGlobalStyle`
   * {
     box-sizing: border-box;
     font-family: 'Cooper Hewitt';
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
   }
  `
