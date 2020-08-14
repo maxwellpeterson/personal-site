@@ -1,8 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import "typeface-lato"
-import "typeface-aleo"
-import "typeface-clear-sans"
 
 const BodyContent = styled.p`
   padding: 25px 0px;

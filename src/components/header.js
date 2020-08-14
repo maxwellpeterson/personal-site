@@ -32,18 +32,20 @@ const StyledLink = styled(Link)`
   }
 `
 
-const pages = [
-  page('About', '/about'),
-  page('Projects', '/projects'),
-  page('Experience', '/experience')
-];
-
-function page(title, path) {
-  return {
-    title: title,
-    path: path
-  };
-}
+const pageData = [
+  {
+    title: "About",
+    path: "/about"
+  },
+  {
+    title: "Projects",
+    path: "/projects"
+  },
+  {
+    title: "Experience",
+    path: "/experience"
+  }
+]
 
 export default function Header() {
   return (
@@ -53,7 +55,7 @@ export default function Header() {
           Max Peterson
         </StyledLink>
         <LinkContainer>
-          {pages.map(page => (
+          {pageData.map(page => (
             <StyledLink to={page.path} key={page.title}>
               {page.title}
             </StyledLink>

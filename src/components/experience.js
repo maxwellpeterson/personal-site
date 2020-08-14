@@ -6,7 +6,7 @@ import SectionHeader from "./section-header"
 import SectionBody from "./section-body"
 import ExperienceEntry from "./experience-entry";
 
-const experienceEntries = [
+const experienceData = [
   {
     position: "Position",
     organization: "Organization",
@@ -37,8 +37,8 @@ export default function Experience({ focus }) {
       <Content>
         <SectionHeader title="Experience" />
         <SectionBody text="Put experience here." />
-        {experienceEntries.map(entry => (
-          <ExperienceEntry key={entry.organization + entry.duration} {...entry} />
+        {experienceData.map(entry => (
+          <ExperienceEntry key={entry.position + entry.organization + entry.duration} {...entry} />
         ))}
       </Content>
     </Background>
