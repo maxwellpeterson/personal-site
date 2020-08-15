@@ -11,6 +11,9 @@ const EntryContainer = styled.div`
 const ImagePlaceholder = styled.div`
   height: 250px;
   background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const TextContainer = styled.div`
@@ -46,7 +49,9 @@ const EntryDescription = styled.p`
 export default function ProjectEntry({ image, path, title, year, description, skills }) {
   return (
     <EntryContainer>
-      <ImagePlaceholder />
+      <ImagePlaceholder>
+        Image Placeholder
+      </ImagePlaceholder>
       <TextContainer>
         <div>
           <TitleContainer>
