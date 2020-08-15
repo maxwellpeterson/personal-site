@@ -3,7 +3,6 @@ import styled from "styled-components"
 import SectionBody from "./section-body"
 
 const EntryContainer = styled.div`
-  width: 50%;
   display: flex;
   flex-direction: column;
   border: 2px solid black;
@@ -16,8 +15,10 @@ const ImagePlaceholder = styled.div`
 
 const TextContainer = styled.div`
   padding: 25px;
+  flex: auto;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   border-top: 2px solid black;
 `
 
@@ -47,17 +48,19 @@ export default function ProjectEntry({ image, path, title, year, description, sk
     <EntryContainer>
       <ImagePlaceholder />
       <TextContainer>
-        <TitleContainer>
-          <EntryTitle>
-            {title}
-          </EntryTitle>
-          <EntryYear>
-            {year}
-          </EntryYear>
-        </TitleContainer>
-        <EntryDescription>
-          {description}
-        </EntryDescription>
+        <div>
+          <TitleContainer>
+            <EntryTitle>
+              {title}
+            </EntryTitle>
+            <EntryYear>
+              {year}
+            </EntryYear>
+          </TitleContainer>
+          <EntryDescription>
+            {description}
+          </EntryDescription>
+        </div>
         <EntryDescription>
           {skills.join(" + ")}
         </EntryDescription>
