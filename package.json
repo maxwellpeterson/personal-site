@@ -4,6 +4,7 @@
   "description": "A personal website for Max Peterson",
   "version": "0.1.0",
   "license": "MIT",
+  "author": "Max Peterson",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
