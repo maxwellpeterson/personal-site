@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import { Background } from "../styles/components/background";
 import { Content } from "../styles/components/content"
 import SectionHeader from "./section-header"
@@ -31,7 +30,7 @@ const experienceData = [
   }
 ]
 
-export default function Experience({ focus }) {
+export default function Experience() {
   return (
     <Background>
       <Content>

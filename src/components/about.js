@@ -12,7 +12,7 @@ const text = `
   Formula One.
 `
 
-export default function About({ focus }) {
+export default function About() {
   return (
     <Background>
       <Content>
