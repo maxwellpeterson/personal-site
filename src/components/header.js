@@ -22,10 +22,8 @@ const LinkContainer = styled.div`
 const StyledLink = styled(Link)`
   padding 25px 25px;
   font-size: 32px;
-  color: black;
-  text-decoration: none;
   white-space: nowrap;
-  transition: all 0.25s;
+  transition: all 0.3s;
   &:hover {
     color: white;
     background: black;

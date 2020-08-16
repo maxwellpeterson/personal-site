@@ -11,4 +11,9 @@ export default createGlobalStyle`
     font-size: 20px;
     font-weight: 300;
   }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
  `
