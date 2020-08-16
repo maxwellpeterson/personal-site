@@ -26,7 +26,7 @@ const projectData = [
     path: "",
     title: "Personal Website",
     year: "2020",
-    description: "This very website, and my first experience with Gatsby and React.",
+    description: "This very website. My first time working with Gatsby and React.",
     skills: ["Gatsby", "React", "Styled Components"]
   },
   {

@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import SectionBody from "./section-body"
 
 const EntryContainer = styled.div`
   display: flex;
