@@ -34,7 +34,7 @@ export default function Footer() {
       <FooterContent>
         <Footnote>
           Designed and built by Max Peterson. Source at{' '}
-          <GitHubLink href="https://github.com/maxwellpeterson" target="_blank">
+          <GitHubLink href="https://github.com/maxwellpeterson/personal-site" target="_blank">
             GitHub
           </GitHubLink>
           .
