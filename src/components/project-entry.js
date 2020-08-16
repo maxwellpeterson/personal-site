@@ -30,8 +30,20 @@ const TitleContainer = styled.div`
   align-items: center;
 `
 
-const EntryTitle = styled.span`
+const EntryTitle = styled.a`
   font-size: 32px;
+  display: inline-block;
+  background-image: linear-gradient(blue, blue);
+  background-position: bottom left;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s;
+  &:hover {
+    background-position: bottom right;
+    background-size: 100% 2px;
+  }
 `
 
 const EntryYear = styled.span`
@@ -54,7 +66,7 @@ export default function ProjectEntry({ image, path, title, year, description, sk
       <TextContainer>
         <div>
           <TitleContainer>
-            <EntryTitle>
+            <EntryTitle href={path} target="_blank">
               {title}
             </EntryTitle>
             <EntryYear>

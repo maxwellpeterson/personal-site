@@ -16,14 +16,14 @@ const projectData = [
   {
     image: "",
     path: "",
-    title: "Test Project",
+    title: "Urban Geometry",
     year: "2020",
     description: "Short description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies.",
     skills: ["Python", "OSMNX"]
   },
   {
     image: "",
-    path: "",
+    path: "https://github.com/maxwellpeterson/personal-site",
     title: "Personal Website",
     year: "2020",
     description: "This very website. My first time working with Gatsby and React.",
@@ -31,7 +31,7 @@ const projectData = [
   },
   {
     image: "",
-    path: "",
+    path: "https://github.com/maxwellpeterson/CS3500_Animator",
     title: "2D Animator",
     year: "2020",
     description: "Lorem ipsum dolor sit amet. Completed for CS 3500 Object-Oriented Design.",
