@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Background } from "../styles/components/background";
+import { Background } from "../styles/components/background"
 import { Content } from "../styles/components/content"
 
 const WelcomeContent =  styled(Content)`

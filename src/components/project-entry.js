@@ -33,7 +33,7 @@ const TitleContainer = styled.div`
 const EntryTitle = styled.a`
   font-size: 32px;
   display: inline-block;
-  background-image: linear-gradient(blue, blue);
+  background-image: linear-gradient(darkviolet, darkviolet);
   background-position: bottom left;
   background-size: 0% 2px;
   background-repeat: no-repeat;
