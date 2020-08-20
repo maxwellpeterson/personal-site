@@ -1,6 +1,5 @@
 import React from "react"
-import styled from "styled-components"
-import { Background } from "../styles/components/background";
+import { Background } from "../styles/components/background"
 import { Content } from "../styles/components/content"
 import SectionHeader from "./section-header"
 import SectionBody from "./section-body"
@@ -14,7 +13,7 @@ const text = `
 
 export default function About() {
   return (
-    <Background>
+    <Background id="about">
       <Content>
         <SectionHeader title="About" />
         <SectionBody text={text} />

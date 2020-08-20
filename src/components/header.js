@@ -1,10 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { Background } from "../styles/components/background";
+import Scrollspy from "react-scrollspy"
+import { Background } from "../styles/components/background"
 
 const HeaderBackground = styled(Background) `
-  background-color: white;
+  background: white;
+  opacity: 0.8;
+  box-shadow: 0 0 15px 5px #D6D6D6;
   position: fixed;
 `
 
@@ -23,7 +26,14 @@ const StyledLink = styled(Link)`
   padding 25px 25px;
   font-size: 32px;
   white-space: nowrap;
-  transition: all 0.3s;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.3s,
+    border-color 0.3s,
+    background 0.3s;
+  &.current-section {
+    border-bottom: 2px solid black;
+  }
   &:hover {
     color: white;
     background: black;
@@ -33,11 +43,11 @@ const StyledLink = styled(Link)`
 const pageData = [
   {
     title: "Projects",
-    path: "/projects"
+    path: "/#projects"
   },
   {
     title: "About",
-    path: "/about"
+    path: "/#about"
   }
 ]
 
@@ -48,13 +58,13 @@ export default function Header() {
         <StyledLink to="/">
           Max Peterson
         </StyledLink>
-        <LinkContainer>
+        <Scrollspy items={["projects", "about"]} currentClassName="current-section" componentTag={LinkContainer}>
           {pageData.map(page => (
             <StyledLink to={page.path} key={page.title}>
               {page.title}
             </StyledLink>
           ))}
-        </LinkContainer>
+        </Scrollspy>
       </HeaderContent>
     </HeaderBackground>
   )

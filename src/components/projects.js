@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Background } from "../styles/components/background";
+import { Background } from "../styles/components/background"
 import { Content } from "../styles/components/content"
 import SectionHeader from "./section-header"
 import SectionBody from "./section-body"
@@ -10,6 +10,10 @@ const ProjectPanelContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 30px;
+`
+
+const subheading = `
+  Things I've developed on my own, plus a few of my larger course projects.
 `
 
 const projectData = [
@@ -31,20 +35,20 @@ const projectData = [
   },
   {
     image: "",
-    path: "https://github.com/maxwellpeterson/CS3500_Animator",
+    path: "https://github.com/maxwellpeterson/",
     title: "2D Animator",
     year: "2020",
-    description: "Lorem ipsum dolor sit amet. Completed for CS 3500 Object-Oriented Design.",
-    skills: ["Java", "MVC", "Swing"]
+    description: "Lorem ipsum dolor sit amet. Mention MVC. Completed for CS 3500 Object-Oriented Design.",
+    skills: ["Java", "Swing"]
   }
 ]
 
 export default function Projects() {
   return (
-    <Background>
+    <Background id="projects">
       <Content>
         <SectionHeader title="Projects" />
-        <SectionBody text="Put projects here." />
+        <SectionBody text={subheading} />
         <ProjectPanelContainer>
           {projectData.map(entry => (
             <ProjectEntry key={entry.title} {...entry} />
