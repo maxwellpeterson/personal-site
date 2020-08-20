@@ -7,7 +7,8 @@ import { Background } from "../styles/components/background"
 const HeaderBackground = styled(Background) `
   background: white;
   opacity: 0.8;
-  box-shadow: 0 0 15px 5px #D6D6D6;
+  box-shadow: ${props => props.atTop ? "none" : "0 0 15px 5px #D6D6D6"};
+  transition: box-shadow 0.3s;
   position: fixed;
 `
 
@@ -51,9 +52,9 @@ const pageData = [
   }
 ]
 
-export default function Header() {
+export default function Header({ atTop }) {
   return (
-    <HeaderBackground>
+    <HeaderBackground atTop={atTop}>
       <HeaderContent>
         <StyledLink to="/">
           Max Peterson
