@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import { normalize } from 'styled-normalize'
+import { createGlobalStyle } from "styled-components"
+import { normalize } from "styled-normalize"
 import "typeface-cooper-hewitt"
  
 export default createGlobalStyle`
@@ -7,7 +7,7 @@ export default createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    font-family: 'Cooper Hewitt';
+    font-family: "Cooper Hewitt";
     font-size: 20px;
     font-weight: 300;
   }
