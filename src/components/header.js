@@ -32,16 +32,12 @@ const StyledLink = styled(Link)`
 
 const pageData = [
   {
-    title: "About",
-    path: "/about"
-  },
-  {
     title: "Projects",
     path: "/projects"
   },
   {
-    title: "Experience",
-    path: "/experience"
+    title: "About",
+    path: "/about"
   }
 ]
 
@@ -49,7 +45,7 @@ export default function Header() {
   return (
     <HeaderBackground>
       <HeaderContent>
-        <StyledLink to='/'>
+        <StyledLink to="/">
           Max Peterson
         </StyledLink>
         <LinkContainer>
