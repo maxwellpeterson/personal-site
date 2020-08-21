@@ -5,8 +5,7 @@ import Scrollspy from "react-scrollspy"
 import { Background } from "../styles/components/background"
 
 const HeaderBackground = styled(Background) `
-  background: white;
-  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.8);
   box-shadow: ${props => props.atTop ? "none" : "0 0 15px 5px #D6D6D6"};
   transition: box-shadow 0.3s;
   position: fixed;

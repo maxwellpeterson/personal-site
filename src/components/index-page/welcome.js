@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Background } from "../styles/components/background"
-import { Content } from "../styles/components/content"
+import { Background } from "../../styles/components/background"
+import { Content } from "../../styles/components/content"
 
 const WelcomeContent =  styled(Content)`
   height: 100vh;

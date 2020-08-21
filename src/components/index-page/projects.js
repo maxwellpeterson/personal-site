@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { Background } from "../styles/components/background"
-import { Content } from "../styles/components/content"
-import SectionHeader from "./section-header"
-import SectionBody from "./section-body"
+import { Background } from "../../styles/components/background"
+import { Content } from "../../styles/components/content"
+import SectionHeader from "../section-header"
+import SectionBody from "../section-body"
 import ProjectEntry from "./project-entry"
 
 const ProjectPanelContainer = styled.div`
@@ -38,7 +38,7 @@ const projectData = [
     path: "https://github.com/maxwellpeterson/",
     title: "2D Animator",
     year: "2020",
-    description: "Lorem ipsum dolor sit amet. Mention MVC. Completed for CS 3500 Object-Oriented Design.",
+    description: "Lorem ipsum dolor sit amet. Mention MVC. Completed for CS 3500 Object-Oriented Design. Per Northeastern policy, this code is maintained in a private repository, and available upon request.",
     skills: ["Java", "Swing"]
   }
 ]
