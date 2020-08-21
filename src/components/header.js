@@ -9,6 +9,7 @@ const HeaderBackground = styled(Background) `
   box-shadow: ${props => props.atTop ? "none" : "0 0 15px 5px #D6D6D6"};
   transition: box-shadow 0.3s;
   position: fixed;
+  z-index: 999;
 `
 
 const HeaderContent = styled.div`

@@ -38,7 +38,11 @@ const projectData = [
     path: "https://github.com/maxwellpeterson/",
     title: "2D Animator",
     year: "2020",
-    description: "Lorem ipsum dolor sit amet. Mention MVC. Completed for CS 3500 Object-Oriented Design. Per Northeastern policy, this code is maintained in a private repository, and available upon request.",
+    description: `
+      Lorem ipsum dolor sit amet. Mention MVC. Completed for CS 3500 Object-Oriented Design. Per 
+      Northeastern policy, this code is maintained in a private repository, and available upon 
+      request.
+      `,
     skills: ["Java", "Swing"]
   }
 ]
