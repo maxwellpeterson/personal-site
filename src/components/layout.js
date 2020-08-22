@@ -1,9 +1,31 @@
 import React, { useState, useEffect } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 import GlobalStyle from "../styles/global-style"
 
 export default function Layout({ children }) {
+
+  const data = useStaticQuery(graphql`
+    query LayoutQuery {
+      header: allHeaderJson {
+        edges {
+          node {
+            links {
+              primary {
+                title
+                path
+              }
+              secondary {
+                title
+                path
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 
   const [atTop, setAtTop] = useState(true);
 
@@ -27,7 +49,7 @@ export default function Layout({ children }) {
   return (
     <>
       <GlobalStyle />
-      <Header atTop={atTop} />
+      <Header primaryLink={data.header.edges[0].node.links.primary} secondaryLinks={data.header.edges[0].node.links.secondary} atTop={atTop} />
       {children}
       <Footer />
     </>

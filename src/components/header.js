@@ -41,28 +41,17 @@ const StyledLink = styled(Link)`
   }
 `
 
-const pageData = [
-  {
-    title: "Projects",
-    path: "/#projects"
-  },
-  {
-    title: "About",
-    path: "/#about"
-  }
-]
-
-export default function Header({ atTop }) {
+export default function Header({ primaryLink, secondaryLinks, atTop }) {
   return (
     <HeaderBackground atTop={atTop}>
       <HeaderContent>
-        <StyledLink to="/">
-          Max Peterson
+        <StyledLink to={primaryLink.path}>
+          {primaryLink.title}
         </StyledLink>
-        <Scrollspy items={["projects", "about"]} currentClassName="current-section" componentTag={LinkContainer}>
-          {pageData.map(page => (
-            <StyledLink to={page.path} key={page.title}>
-              {page.title}
+        <Scrollspy items={secondaryLinks.map(link => link.title.toLowerCase())} currentClassName="current-section" componentTag={LinkContainer}>
+          {secondaryLinks.map(link => (
+            <StyledLink to={link.path} key={link.title}>
+              {link.title}
             </StyledLink>
           ))}
         </Scrollspy>

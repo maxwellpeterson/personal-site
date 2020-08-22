@@ -1,0 +1,18 @@
+{
+  "links": {
+    "primary": {
+      "title": "Max Peterson",
+      "path": "/"
+    },
+    "secondary": [
+      {
+        "title": "Projects",
+        "path": "/#projects"
+      },
+      {
+        "title": "About",
+        "path": "/#about"
+      }
+    ]
+  }
+}
