@@ -13,6 +13,7 @@ export default createGlobalStyle`
   }
 
   html {
+    /* Not supported by Safari */
     scroll-behavior: smooth;
   }
 
