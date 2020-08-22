@@ -5,10 +5,15 @@ import Header from "./header"
 import Footer from "./footer"
 import GlobalStyle from "../styles/global-style"
 
-export default function Layout({ pageTitle, children }) {
+export default function Layout({ page, children }) {
 
   const data = useStaticQuery(graphql`
     query LayoutQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
       header: allHeaderJson {
         edges {
           node {
@@ -51,7 +56,7 @@ export default function Layout({ pageTitle, children }) {
     <>
       <Helmet>
         <title>
-          {pageTitle}
+          {page + " | " + data.site.siteMetadata.title}
         </title>
       </Helmet>
       <GlobalStyle />

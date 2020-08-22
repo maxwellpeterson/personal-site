@@ -20,7 +20,7 @@ const StyledMessage = styled(StyledHeading)`
 
 export default function PageNotFound() {
   return (
-    <Layout>
+    <Layout page="404">
       <Background>
         <MessageContent>
           <StyledHeading>
