@@ -5,7 +5,7 @@
     {
       "title": "Urban Geometry",
       "year": "2020",
-      "image": "./images/urban-geometry.jpg",
+      "image": "./images/cole-valley.png",
       "link": "",
       "description": "Short description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies.",
       "tech": ["Python", "OSMNX"]
@@ -13,7 +13,7 @@
     {
       "title": "Personal Website",
       "year": "2020",
-      "image": "./images/urban-geometry.jpg",
+      "image": "./images/border-icon.png",
       "link": "https://github.com/maxwellpeterson/personal-site",
       "description": "This very website. My first time working with Gatsby and React.",
       "tech": ["Gatsby", "React", "Styled Components"]
@@ -21,7 +21,7 @@
     {
       "title": "2D Animator",
       "year": "2020",
-      "image": "./images/urban-geometry.jpg",
+      "image": "./images/big-bang.png",
       "link": "https://github.com/maxwellpeterson/",
       "description": "Lorem ipsum dolor sit amet. Mention MVC. Completed for CS 3500 Object-Oriented Design. Per Northeastern policy, this code is maintained in a private repository, and available upon request.",
       "tech": ["Java", "Swing"]

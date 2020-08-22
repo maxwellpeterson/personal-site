@@ -13,6 +13,7 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 25px;
+  background: #f0f0f0;
 `
 
 const TextContainer = styled.div`
