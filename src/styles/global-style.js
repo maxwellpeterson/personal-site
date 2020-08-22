@@ -12,6 +12,10 @@ export default createGlobalStyle`
     font-weight: 300;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   a {
     color: black;
     text-decoration: none;

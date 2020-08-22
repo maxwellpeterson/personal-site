@@ -7,7 +7,7 @@ import { Background } from "../styles/components/background"
 const HeaderBackground = styled(Background) `
   background: rgba(255, 255, 255, 0.8);
   box-shadow: ${props => props.atTop ? "none" : "0 0 15px 5px #D6D6D6"};
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.2s;
   position: fixed;
   z-index: 999;
 `
@@ -30,7 +30,7 @@ const StyledLink = styled(Link)`
   border-bottom: 2px solid transparent;
   transition:
     color 0.3s,
-    border-color 0.3s,
+    border-color 0.2s,
     background 0.3s;
   &.current-section {
     border-bottom: 2px solid black;
