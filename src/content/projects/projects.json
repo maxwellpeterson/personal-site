@@ -7,7 +7,7 @@
       "year": "2020",
       "image": "./images/cole-valley.png",
       "link": "",
-      "description": "Short description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies.",
+      "description": "Short description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "tech": ["Python", "OSMNX"]
     },
     {
@@ -23,7 +23,7 @@
       "year": "2020",
       "image": "./images/big-bang.png",
       "link": "https://github.com/maxwellpeterson/",
-      "description": "Lorem ipsum dolor sit amet. Mention MVC. Completed for CS 3500 Object-Oriented Design. Per Northeastern policy, this code is maintained in a private repository, and available upon request.",
+      "description": "Lorem ipsum dolor sit amet. Mention MVC. Completed for CS 3500 Object-Oriented Design.",
       "tech": ["Java", "Swing"]
     }
   ]
