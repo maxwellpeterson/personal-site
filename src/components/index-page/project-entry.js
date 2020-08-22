@@ -1,4 +1,5 @@
 import React from "react"
+import Img from "gatsby-image"
 import styled from "styled-components"
 
 const EntryContainer = styled.div`
@@ -7,12 +8,11 @@ const EntryContainer = styled.div`
   border: 2px solid black;
 `
 
-const ImagePlaceholder = styled.div`
-  height: 250px;
-  background-color: #f0f0f0;
+const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 25px;
 `
 
 const TextContainer = styled.div`
@@ -57,16 +57,16 @@ const EntryDescription = styled.p`
 
 `
 
-export default function ProjectEntry({ image, path, title, year, description, skills }) {
+export default function ProjectEntry({ title, year, image, link, description, tech }) {
   return (
     <EntryContainer>
-      <ImagePlaceholder>
-        Image Placeholder
-      </ImagePlaceholder>
+      <ImageContainer>
+        <Img fixed={image.childImageSharp.fixed} />
+      </ImageContainer>
       <TextContainer>
         <div>
           <TitleContainer>
-            <EntryTitle href={path} target="_blank">
+            <EntryTitle href={link} target="_blank">
               {title}
             </EntryTitle>
             <EntryYear>
@@ -78,7 +78,7 @@ export default function ProjectEntry({ image, path, title, year, description, sk
           </EntryDescription>
         </div>
         <EntryDescription>
-          {skills.join(" + ")}
+          {tech.join(" + ")}
         </EntryDescription>
       </TextContainer>
     </EntryContainer>

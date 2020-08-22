@@ -12,50 +12,15 @@ const ProjectPanelContainer = styled.div`
   grid-gap: 30px;
 `
 
-const subheading = `
-  Things I've developed on my own, plus a few of my larger course projects.
-`
-
-const projectData = [
-  {
-    image: "",
-    path: "",
-    title: "Urban Geometry",
-    year: "2020",
-    description: "Short description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies.",
-    skills: ["Python", "OSMNX"]
-  },
-  {
-    image: "",
-    path: "https://github.com/maxwellpeterson/personal-site",
-    title: "Personal Website",
-    year: "2020",
-    description: "This very website. My first time working with Gatsby and React.",
-    skills: ["Gatsby", "React", "Styled Components"]
-  },
-  {
-    image: "",
-    path: "https://github.com/maxwellpeterson/",
-    title: "2D Animator",
-    year: "2020",
-    description: `
-      Lorem ipsum dolor sit amet. Mention MVC. Completed for CS 3500 Object-Oriented Design. Per 
-      Northeastern policy, this code is maintained in a private repository, and available upon 
-      request.
-      `,
-    skills: ["Java", "Swing"]
-  }
-]
-
-export default function Projects() {
+export default function Projects({ title, description, projects }) {
   return (
-    <Background id="projects">
+    <Background id={title.toLowerCase()}>
       <Content>
-        <SectionHeader title="Projects" />
-        <SectionBody text={subheading} />
+        <SectionHeader title={title} />
+        <SectionBody text={description} />
         <ProjectPanelContainer>
-          {projectData.map(entry => (
-            <ProjectEntry key={entry.title} {...entry} />
+          {projects.map(project => (
+            <ProjectEntry key={project.title} {...project} />
           ))}
         </ProjectPanelContainer>
       </Content>

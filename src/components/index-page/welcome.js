@@ -11,16 +11,11 @@ const StyledMessage = styled.p`
   font-size: 32px;
 `
 
-const text = [
-  "Hi, I'm Max.",
-  "I'm a third-year undergraduate studying computer science at Northeastern University."
-];
-
-export default function Welcome() {
+export default function Welcome({ greeting }) {
   return (
     <Background>
       <WelcomeContent>
-        {text.map(msg => (
+        {greeting.map(msg => (
           <StyledMessage key={msg}>
             {msg}
           </StyledMessage>

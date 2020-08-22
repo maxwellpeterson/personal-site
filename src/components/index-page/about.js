@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
 import { Background } from "../../styles/components/background"
 import { Content } from "../../styles/components/content"
 import SectionHeader from "../section-header"
@@ -25,36 +24,15 @@ const AboutParagraph = styled(SectionBody)`
   grid-column: 2;
 `
 
-const text = [`
-  I'm a student and software developer based out of Boston, MA and San Francisco, CA. As an
-  undergraduate at Northeastern University, I currently spend most of my time <doing some stuff>. 
-  Outside of programming, I enjoy cycling, cooking, and Formula One.
-  `,
-  `
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies. Lorem ipsum dolor 
-  sit amet, consectetur adipiscing elit. Aenean ultricies. Lorem ipsum dolor sit amet, consectetur 
-  adipiscing elit. Aenean ultricies.
-  `]
-
-export default function About() {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "images/about/profile.JPG" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+export default function About({ title, image, description }) {
   return (
-    <Background id="about">
+    <Background id={title.toLowerCase()}>
       <Content>
-        <SectionHeader title="About" />
+        <SectionHeader title={title} />
         <AboutContainer>
-          <ProfileImage fluid={data.file.childImageSharp.fluid} />
-          {text.map(p => (
+          <ProfileImage fluid={image.childImageSharp.fluid} />
+          {/* Not sure if this is the best way to create keys for each paragraph... */}
+          {description.map(p => (
             <AboutParagraph key={p.slice(0, 25)} text={p} />
           ))}
         </AboutContainer>

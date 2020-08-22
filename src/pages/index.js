@@ -1,15 +1,65 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Welcome from "../components/index-page/welcome"
 import About from "../components/index-page/about"
 import Projects from "../components/index-page/projects"
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <Layout>
-      <Welcome />
-      <Projects />
-      <About />
+      <Welcome {...data.welcome.edges[0].node}/>
+      <Projects {...data.projects.edges[0].node} />
+      <About {...data.about.edges[0].node} />
     </Layout>
   )
 }
+
+export const query = graphql`
+  query ProjectQuery {
+    welcome: allWelcomeJson {
+      edges {
+        node {
+          greeting
+        }
+      }
+    }
+    projects: allProjectsJson {
+      edges {
+        node {
+          title
+          description
+          projects {
+            title
+            year
+            image {
+              childImageSharp {
+                fixed(height: 250, quality: 100) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            link
+            description
+            tech
+          }
+        }
+      }
+    }
+    about: allAboutJson {
+      edges {
+        node {
+          title
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          description
+        }
+      }
+    }
+  }
+`
