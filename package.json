@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "max-peterson-personal-site",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A personal website for Max Peterson",
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "MIT",
+  "author": "Max Peterson",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -16,24 +17,27 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.23.12",
+    "gatsby-image": "^2.4.16",
+    "gatsby-plugin-sharp": "^2.6.27",
     "gatsby-plugin-styled-components": "^3.3.10",
+    "gatsby-source-filesystem": "^2.3.24",
+    "gatsby-transformer-json": "^2.4.11",
+    "gatsby-transformer-sharp": "^2.5.13",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-waypoint": "^9.0.3",
+    "react-scrollspy": "^3.4.3",
     "styled-components": "^5.1.1",
     "styled-normalize": "^8.0.7",
-    "typeface-aleo": "0.0.69",
-    "typeface-cooper-hewitt": "0.0.44",
-    "typeface-lato": "0.0.75"
+    "typeface-cooper-hewitt": "0.0.44"
   },
   "devDependencies": {
     "prettier": "2.0.5"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/maxwellpeterson/personal-site"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/maxwellpeterson/personal-site/issues"
   }
 }

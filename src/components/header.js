@@ -1,12 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { Background } from "../styles/components/background";
+import Scrollspy from "react-scrollspy"
+import { Background } from "../styles/components/background"
 
 const HeaderBackground = styled(Background) `
-  background-color: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: ${props => props.atTop ? "none" : "0 0 15px 5px #D6D6D6"};
+  transition: box-shadow 0.3s;
   position: fixed;
-  width: 100%;
+  z-index: 999;
 `
 
 const HeaderContent = styled.div`
@@ -23,45 +26,46 @@ const LinkContainer = styled.div`
 const StyledLink = styled(Link)`
   padding 25px 25px;
   font-size: 32px;
-  color: black;
-  text-decoration: none;
   white-space: nowrap;
-  transition: all 0.25s;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.3s,
+    border-color 0.3s,
+    background 0.3s;
+  &.current-section {
+    border-bottom: 2px solid black;
+  }
   &:hover {
     color: white;
     background: black;
   }
 `
 
-const pages = [
-  page('About', '/about'),
-  page('Projects', '/projects'),
-  page('Experience', '/experience')
-];
+const pageData = [
+  {
+    title: "Projects",
+    path: "/#projects"
+  },
+  {
+    title: "About",
+    path: "/#about"
+  }
+]
 
-function page(title, path) {
-  return {
-    title: title,
-    path: path
-  };
-}
-
-export default function Header() {
+export default function Header({ atTop }) {
   return (
-    <HeaderBackground>
+    <HeaderBackground atTop={atTop}>
       <HeaderContent>
-        <StyledLink to='/'>
+        <StyledLink to="/">
           Max Peterson
         </StyledLink>
-        <LinkContainer>
-          {pages.map(page =>{
-            return (
-              <StyledLink to={page.path} key={page.title}>
-                {page.title}
-              </StyledLink>
-            )
-          })}
-        </LinkContainer>
+        <Scrollspy items={["projects", "about"]} currentClassName="current-section" componentTag={LinkContainer}>
+          {pageData.map(page => (
+            <StyledLink to={page.path} key={page.title}>
+              {page.title}
+            </StyledLink>
+          ))}
+        </Scrollspy>
       </HeaderContent>
     </HeaderBackground>
   )

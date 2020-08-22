@@ -1,31 +1,65 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Welcome from "../components/welcome"
-import About from "../components/about";
-import { Waypoint } from "react-waypoint";
+import Welcome from "../components/index-page/welcome"
+import About from "../components/index-page/about"
+import Projects from "../components/index-page/projects"
 
-export default class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      focus: 'welcome'
-    };
-  }
-
-  updateFocus(sectionInFocus) {
-    this.setState({focus: sectionInFocus});
-  }
-
-  render() {
-    return (
-      <Layout>
-        <Waypoint onEnter={() => this.updateFocus('welcome')} />
-        <Welcome focus={this.state.focus === 'welcome'} />
-        <Waypoint onEnter={() => this.updateFocus('about')} />
-        <About focus={this.state.focus === 'about'} />
-        <Waypoint onEnter={() => this.updateFocus('projects')} />
-        <Welcome focus={this.state.focus === 'projects'} />
-      </Layout>
-    )
-  }
+export default function Home({ data }) {
+  return (
+    <Layout>
+      <Welcome {...data.welcome.edges[0].node}/>
+      <Projects {...data.projects.edges[0].node} />
+      <About {...data.about.edges[0].node} />
+    </Layout>
+  )
 }
+
+export const query = graphql`
+  query ProjectQuery {
+    welcome: allWelcomeJson {
+      edges {
+        node {
+          greeting
+        }
+      }
+    }
+    projects: allProjectsJson {
+      edges {
+        node {
+          title
+          description
+          projects {
+            title
+            year
+            image {
+              childImageSharp {
+                fixed(height: 250, quality: 100) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            link
+            description
+            tech
+          }
+        }
+      }
+    }
+    about: allAboutJson {
+      edges {
+        node {
+          title
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          description
+        }
+      }
+    }
+  }
+`
