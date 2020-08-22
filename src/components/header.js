@@ -6,7 +6,7 @@ import { Background } from "../styles/components/background"
 
 const HeaderBackground = styled(Background) `
   background: rgba(255, 255, 255, 0.8);
-  box-shadow: ${props => props.atTop ? "none" : "0 0 15px 5px #D6D6D6"};
+  ${props => props.atTop || "box-shadow: 0 0 15px 5px #D6D6D6"};
   transition: box-shadow 0.2s;
   position: fixed;
   z-index: 999;

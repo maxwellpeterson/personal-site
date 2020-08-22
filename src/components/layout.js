@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import Header from "./header"
 import Footer from "./footer"
 import GlobalStyle from "../styles/global-style"
 
-export default function Layout({ children }) {
+export default function Layout({ pageTitle, children }) {
 
   const data = useStaticQuery(graphql`
     query LayoutQuery {
@@ -48,6 +49,11 @@ export default function Layout({ children }) {
 
   return (
     <>
+      <Helmet>
+        <title>
+          {pageTitle}
+        </title>
+      </Helmet>
       <GlobalStyle />
       <Header primaryLink={data.header.edges[0].node.links.primary} secondaryLinks={data.header.edges[0].node.links.secondary} atTop={atTop} />
       {children}

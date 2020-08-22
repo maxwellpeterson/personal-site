@@ -7,7 +7,7 @@ import Projects from "../components/index-page/projects"
 
 export default function Home({ data }) {
   return (
-    <Layout>
+    <Layout pageTitle={data.site.siteMetadata.title}>
       <Welcome {...data.welcome.edges[0].node}/>
       <Projects {...data.projects.edges[0].node} />
       <About {...data.about.edges[0].node} />
@@ -16,7 +16,12 @@ export default function Home({ data }) {
 }
 
 export const query = graphql`
-  query ProjectQuery {
+  query IndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     welcome: allWelcomeJson {
       edges {
         node {
@@ -52,7 +57,7 @@ export const query = graphql`
           title
           image {
             childImageSharp {
-              fluid {
+              fluid(maxHeight: 300, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
