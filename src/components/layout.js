@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faGithub, faStrava, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faGithub, faStrava, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import Header from "components/header"
 import Footer from "components/footer"
 import GlobalStyle from "styles/global-style"
 
 /* These icons can now be accessed by string reference elsewhere. Could also import entire fab library... */
-library.add(faLinkedinIn, faGithub, faStrava)
+library.add(faEnvelope, faLinkedinIn, faGithub, faStrava)
 
 export default function Layout({ page, children }) {
 
@@ -40,7 +41,10 @@ export default function Layout({ page, children }) {
           node {
             text
             media {
-              icon
+              icon {
+                type
+                name
+              }
               color
               link
             }

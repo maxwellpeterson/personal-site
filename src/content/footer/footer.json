@@ -2,17 +2,34 @@
   "text": "Designed and built by Max Peterson.",
   "media": [
     {
-      "icon": "linkedin-in",
+      "icon": {
+        "type": "fas",
+        "name": "envelope"
+      },
+      "color": "#d93025",
+      "link": "mailto:peterson.ma@northeastern.edu"
+    },
+    {
+      "icon": {
+        "type": "fab",
+        "name": "linkedin-in"
+      },
       "color": "#0077b5",
       "link": "https://www.linkedin.com/in/max-peterson/"
     },
     {
-      "icon": "github",
+      "icon": {
+        "type": "fab",
+        "name": "github"
+      },
       "color": "#6f42c1",
       "link": "https://github.com/maxwellpeterson"
     },
     {
-      "icon": "strava",
+      "icon": {
+        "type": "fab",
+        "name": "strava"
+      },
       "color": "#fc4c02",
       "link": "https://www.strava.com/athletes/maxpeterson"
     }

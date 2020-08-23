@@ -35,7 +35,7 @@ export const query = graphql`
             image {
               childImageSharp {
                 fixed(height: 250, quality: 100) {
-                  ...GatsbyImageSharpFixed
+                  ...GatsbyImageSharpFixed_tracedSVG
                 }
               }
             }

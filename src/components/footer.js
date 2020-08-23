@@ -33,8 +33,8 @@ export default function Footer({ text, media }) {
         </Footnote>
         <div>
           {media.map(item => (
-            <a key={item.icon} href={item.link} rel="noreferrer" target="_blank">
-              <MediaLogo icon={["fab", item.icon]} color={item.color} />
+            <a key={item.icon.name} href={item.link} rel="noreferrer" target="_blank">
+              <MediaLogo icon={[item.icon.type, item.icon.name]} color={item.color} />
             </a>
           ))}
         </div>
