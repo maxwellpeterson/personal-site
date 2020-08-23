@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faStrava, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"

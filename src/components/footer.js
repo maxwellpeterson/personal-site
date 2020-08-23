@@ -16,7 +16,6 @@ const Footnote = styled.p`
 
 const FlexContainer = styled.div`
   display: flex;
-  background: red;
 `
 
 const MediaLogo = styled(FontAwesomeIcon)`
