@@ -4,7 +4,7 @@
     {
       "icon": {
         "type": "fas",
-        "name": "envelope"
+        "name": "paper-plane"
       },
       "color": "#d93025",
       "link": "mailto:peterson.ma@northeastern.edu"
