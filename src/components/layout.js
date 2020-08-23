@@ -3,9 +3,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGithub, faStrava, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import Header from "./header"
-import Footer from "./footer"
-import GlobalStyle from "../styles/global-style"
+import Header from "components/header"
+import Footer from "components/footer"
+import GlobalStyle from "styles/global-style"
 
 /* These icons can now be accessed by string reference elsewhere. Could also import entire fab library... */
 library.add(faLinkedinIn, faGithub, faStrava)

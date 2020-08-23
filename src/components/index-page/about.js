@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { Background } from "../../styles/components/background"
-import { Content } from "../../styles/components/content"
-import SectionHeader from "../section-header"
-import SectionBody from "../section-body"
+import Background from "styles/components/background"
+import Content from "styles/components/content"
+import SectionHeader from "components/section-header"
+import SectionBody from "components/section-body"
 
 const AboutContainer = styled.div`
   padding: 50px 0px;

@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import Layout from "../components/layout"
-import { Background } from "../styles/components/background"
-import { Content } from "../styles/components/content"
+import Layout from "components/layout"
+import Background from "styles/components/background"
+import Content from "styles/components/content"
 
 const MessageContent = styled(Content)`
   align-items: center;

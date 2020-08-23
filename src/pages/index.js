@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import Welcome from "../components/index-page/welcome"
-import About from "../components/index-page/about"
-import Projects from "../components/index-page/projects"
+import Layout from "components/layout"
+import Welcome from "components/index-page/welcome"
+import Projects from "components/index-page/projects"
+import About from "components/index-page/about"
 
 export default function Home({ data }) {
   return (

@@ -1,10 +1,12 @@
 import styled from "styled-components"
 
-export const Content = styled.div`
+const Content = styled.div`
+  padding: 125px 25px;  
   max-width: 1000px;
-  padding: 125px 25px;;
-  display: flex;
   flex: auto;
+  display: flex;
   flex-direction: column;
   justify-content: center;
 `
+
+export default Content

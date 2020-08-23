@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Background } from "../styles/components/background"
+import Background from "styles/components/background"
 
 const FooterBackground = styled(Background)`
   background-color: black;
@@ -40,7 +40,7 @@ export default function Footer({ text, media }) {
         </Footnote>
         <div>
           {media.map(item => (
-            <a href={item.link} rel="noreferrer" target="_blank">
+            <a key={item.icon} href={item.link} rel="noreferrer" target="_blank">
               <MediaLogo icon={["fab", item.icon]} color={item.color} />
             </a>
           ))}

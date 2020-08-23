@@ -1,3 +1,3 @@
-# URL Goes Here
+# maxpeterson.cc
 
-A portfolio site for some of the projects I've worked on.
+A portfolio for some of the projects I've worked on.

@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
+import { Link } from "gatsby"
 import Scrollspy from "react-scrollspy"
-import { Background } from "../styles/components/background"
+import Background from "styles/components/background"
 
 const HeaderBackground = styled(Background) `
   background: rgba(255, 255, 255, 0.8);
@@ -50,7 +50,7 @@ export default function Header({ atTop, primary, secondary }) {
         </StyledLink>
         <Scrollspy items={secondary.map(link => link.title.toLowerCase())} currentClassName="current" componentTag={LinkContainer}>
           {secondary.map(link => (
-            <StyledLink to={link.path} key={link.title}>
+            <StyledLink key={link.title} to={link.path}>
               {link.title}
             </StyledLink>
           ))}

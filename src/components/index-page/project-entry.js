@@ -1,6 +1,6 @@
 import React from "react"
-import Img from "gatsby-image"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 const EntryContainer = styled.div`
   display: flex;
