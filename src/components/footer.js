@@ -14,6 +14,10 @@ const Footnote = styled.p`
   color: white;
 `
 
+const FlexContainer = styled.div`
+  display: flex;
+`
+
 const MediaLogo = styled(FontAwesomeIcon)`
   margin: 8px;
   color: white;
@@ -32,13 +36,13 @@ export default function Footer({ text, media }) {
         <Footnote>
           {text}
         </Footnote>
-        <div>
+        <FlexContainer>
           {media.map(item => (
             <a key={item.icon.name} href={item.link} rel="noreferrer" target="_blank">
               <MediaLogo icon={[item.icon.type, item.icon.name]} color={item.color} />
             </a>
           ))}
-        </div>
+        </FlexContainer>
       </WideContent>
     </FooterBackground>
   )
