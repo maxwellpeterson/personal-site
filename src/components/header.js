@@ -32,7 +32,7 @@ const StyledLink = styled(Link)`
     color 0.3s,
     border-color 0.2s,
     background 0.3s;
-  &.current-section {
+  &.current {
     border-bottom: 2px solid black;
   }
   &:hover {
@@ -41,15 +41,15 @@ const StyledLink = styled(Link)`
   }
 `
 
-export default function Header({ primaryLink, secondaryLinks, atTop }) {
+export default function Header({ atTop, primary, secondary }) {
   return (
     <HeaderBackground atTop={atTop}>
       <HeaderContent>
-        <StyledLink to={primaryLink.path}>
-          {primaryLink.title}
+        <StyledLink to={primary.path}>
+          {primary.title}
         </StyledLink>
-        <Scrollspy items={secondaryLinks.map(link => link.title.toLowerCase())} currentClassName="current-section" componentTag={LinkContainer}>
-          {secondaryLinks.map(link => (
+        <Scrollspy items={secondary.map(link => link.title.toLowerCase())} currentClassName="current" componentTag={LinkContainer}>
+          {secondary.map(link => (
             <StyledLink to={link.path} key={link.title}>
               {link.title}
             </StyledLink>

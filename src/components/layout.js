@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faGithub, faStrava, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import Header from "./header"
 import Footer from "./footer"
 import GlobalStyle from "../styles/global-style"
+
+/* These icons can now be accessed by string reference elsewhere. Could also import entire fab library... */
+library.add(faLinkedinIn, faGithub, faStrava)
 
 export default function Layout({ page, children }) {
 
@@ -26,6 +31,18 @@ export default function Layout({ page, children }) {
                 title
                 path
               }
+            }
+          }
+        }
+      }
+      footer: allFooterJson {
+        edges {
+          node {
+            text
+            media {
+              icon
+              color
+              link
             }
           }
         }
@@ -60,9 +77,9 @@ export default function Layout({ page, children }) {
         </title>
       </Helmet>
       <GlobalStyle />
-      <Header primaryLink={data.header.edges[0].node.links.primary} secondaryLinks={data.header.edges[0].node.links.secondary} atTop={atTop} />
+      <Header atTop={atTop} {...data.header.edges[0].node.links} />
       {children}
-      <Footer />
+      <Footer {...data.footer.edges[0].node}/>
     </>
   )
 }

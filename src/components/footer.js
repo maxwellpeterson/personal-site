@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Background } from "../styles/components/background"
 
 const FooterBackground = styled(Background)`
@@ -10,6 +11,8 @@ const FooterContent = styled.div`
   max-width: 1200px;
   display: flex;
   flex: auto;
+  justify-content: space-between;
+  align-items: center;
 `
 
 const Footnote = styled.p`
@@ -18,27 +21,30 @@ const Footnote = styled.p`
   color: white;
 `
 
-const GitHubLink = styled.a`
+const MediaLogo = styled(FontAwesomeIcon)`
+  margin: 8px;
   color: white;
-  font-size: 20px;
-  text-decoration: none;
-  transition: all 0.25s;
+  font-size: 24px;
+  transition: color 0.2s;
   &:hover {
-    color: darkviolet;
+    color: ${props => props.color};
   }
 `
 
-export default function Footer() {
+export default function Footer({ text, media }) {
   return (
     <FooterBackground>
       <FooterContent>
         <Footnote>
-          Designed and built by Max Peterson. Source at{" "}
-          <GitHubLink href="https://github.com/maxwellpeterson/personal-site" target="_blank">
-            GitHub
-          </GitHubLink>
-          .
+          {text}
         </Footnote>
+        <div>
+          {media.map(item => (
+            <a href={item.link} rel="noreferrer" target="_blank">
+              <MediaLogo icon={["fab", item.icon]} color={item.color} />
+            </a>
+          ))}
+        </div>
       </FooterContent>
     </FooterBackground>
   )

@@ -1,0 +1,20 @@
+{
+  "text": "Designed and built by Max Peterson.",
+  "media": [
+    {
+      "icon": "linkedin-in",
+      "color": "#0077b5",
+      "link": "https://www.linkedin.com/in/max-peterson/"
+    },
+    {
+      "icon": "github",
+      "color": "#6f42c1",
+      "link": "https://github.com/maxwellpeterson"
+    },
+    {
+      "icon": "strava",
+      "color": "#fc4c02",
+      "link": "https://www.strava.com/athletes/maxpeterson"
+    }
+  ]
+}
