@@ -18,6 +18,7 @@ const MediaLogo = styled(FontAwesomeIcon)`
   margin: 8px;
   color: white;
   font-size: 24px;
+  max-height: 24px;
   transition: color 0.2s;
   &:hover {
     color: ${props => props.color};
