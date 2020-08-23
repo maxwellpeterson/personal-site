@@ -5,7 +5,7 @@
     {
       "title": "Urban Geometry",
       "year": "2020",
-      "image": "./images/cole-valley.png",
+      "image": "./images/cole-valley-grid.png",
       "link": "",
       "description": "Short description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "tech": ["Python", "OSMNX"]
@@ -13,7 +13,7 @@
     {
       "title": "Personal Website",
       "year": "2020",
-      "image": "./images/border-icon.png",
+      "image": "./images/padded-icon.png",
       "link": "https://github.com/maxwellpeterson/personal-site",
       "description": "This very website. My first time working with Gatsby and React.",
       "tech": ["Gatsby", "React", "Styled Components"]
