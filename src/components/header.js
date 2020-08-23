@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import Scrollspy from "react-scrollspy"
 import Background from "styles/components/background"
+import WideContent from "styles/components/wide-content"
 
 const HeaderBackground = styled(Background) `
   background: rgba(255, 255, 255, 0.8);
@@ -10,13 +11,6 @@ const HeaderBackground = styled(Background) `
   transition: box-shadow 0.2s;
   position: fixed;
   z-index: 999;
-`
-
-const HeaderContent = styled.div`
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  flex: auto;
 `
 
 const LinkContainer = styled.div`
@@ -44,7 +38,7 @@ const StyledLink = styled(Link)`
 export default function Header({ atTop, primary, secondary }) {
   return (
     <HeaderBackground atTop={atTop}>
-      <HeaderContent>
+      <WideContent>
         <StyledLink to={primary.path}>
           {primary.title}
         </StyledLink>
@@ -55,7 +49,7 @@ export default function Header({ atTop, primary, secondary }) {
             </StyledLink>
           ))}
         </Scrollspy>
-      </HeaderContent>
+      </WideContent>
     </HeaderBackground>
   )
 }
