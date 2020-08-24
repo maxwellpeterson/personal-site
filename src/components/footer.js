@@ -8,21 +8,35 @@ const FooterBackground = styled(Background)`
   background-color: black;
 `
 
+const FooterContent = styled.div`
+  max-width: 1200px;
+  width: 100%;
+  padding: 50px 25px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 25px;
+  
+  @media (min-width: 600px) {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    
+  }
+`
+
 const Footnote = styled.p`
-  padding 25px 25px;
-  font-size: 20px;
   color: white;
 `
 
 const FlexContainer = styled.div`
   display: flex;
+  justify-content: center;
 `
 
 const MediaLogo = styled(FontAwesomeIcon)`
   margin: 8px;
   color: white;
   font-size: 24px;
-  max-height: 24px;
   transition: color 0.2s;
   &:hover {
     color: ${props => props.color};
@@ -32,7 +46,7 @@ const MediaLogo = styled(FontAwesomeIcon)`
 export default function Footer({ text, media }) {
   return (
     <FooterBackground>
-      <WideContent>
+      <FooterContent>
         <Footnote>
           {text}
         </Footnote>
@@ -43,7 +57,7 @@ export default function Footer({ text, media }) {
             </a>
           ))}
         </FlexContainer>
-      </WideContent>
+      </FooterContent>
     </FooterBackground>
   )
 }
