@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Background from "styles/components/background"
-import WideContent from "styles/components/wide-content"
 
 const FooterBackground = styled(Background)`
   background-color: black;

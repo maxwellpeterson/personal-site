@@ -6,7 +6,6 @@ import Content from "styles/components/content"
 import SectionTitle from "styles/components/section-title"
 
 const AboutContainer = styled.div`
-  padding: 50px 0px;
   display: grid;
   grid-gap: 25px;
 

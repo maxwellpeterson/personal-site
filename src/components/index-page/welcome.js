@@ -5,10 +5,15 @@ import Content from "styles/components/content"
 
 const WelcomeContent =  styled(Content)`
   height: 100vh;
+  padding: 0 25px;
+
+  @media (max-height: 400px) {
+    justify-content: end;
+  }
 `
 
 const StyledMessage = styled.p`
-  padding: 25px 0px;
+  padding: 0.75em 0;
   font-size: 1.6em;
 `
 
