@@ -8,6 +8,7 @@ const WelcomeContent =  styled(Content)`
 `
 
 const StyledMessage = styled.p`
+  padding: 25px 0px;
   font-size: 32px;
 `
 

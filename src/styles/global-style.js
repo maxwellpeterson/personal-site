@@ -21,4 +21,8 @@ export default createGlobalStyle`
     color: black;
     text-decoration: none;
   }
+
+  p {
+    margin: 0;
+  }
  `

@@ -16,7 +16,7 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px;
+  padding: 50px 25px;
   background: #f0f0f0;
 `
 
@@ -37,19 +37,17 @@ const TitleContainer = styled.div`
   border-bottom: 1px solid black;
 `
 
-const EntryTitle = styled.span`
+const Title = styled.span`
   font-size: 28px;
 `
 
-const EntryYear = styled.span`
-  font-size: 22px;
+const Year = styled.span`
+
 `
 
-const EntryDescription = styled.p`
+const Description = styled.p`
   margin: 0;
   padding-top : 25px;
-  text-align: justify;
-
 `
 
 export default function ProjectEntry({ title, year, image, link, description, tech }) {
@@ -62,20 +60,20 @@ export default function ProjectEntry({ title, year, image, link, description, te
         <TextContainer>
           <div>
             <TitleContainer>
-              <EntryTitle>
+              <Title>
                 {title}
-              </EntryTitle>
-              <EntryYear>
+              </Title>
+              <Year>
                 {year}
-              </EntryYear>
+              </Year>
             </TitleContainer>
-            <EntryDescription>
+            <Description>
               {description}
-            </EntryDescription>
+            </Description>
           </div>
-          <EntryDescription>
+          <Description>
             {tech.join(" + ")}
-          </EntryDescription>
+          </Description>
         </TextContainer>
       </EntryContainer>
     </a>
