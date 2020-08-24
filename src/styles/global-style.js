@@ -29,5 +29,6 @@ export default createGlobalStyle`
 
   p {
     margin: 0;
+    line-height: 1.25;
   }
  `

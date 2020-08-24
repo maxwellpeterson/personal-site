@@ -9,7 +9,11 @@ const WelcomeContent =  styled(Content)`
 
 const StyledMessage = styled.p`
   padding: 25px 0px;
-  font-size: 32px;
+  font-size: 20px;
+
+  @media (min-width: 400px) {
+    font-size: 32px;
+  }
 `
 
 export default function Welcome({ greeting }) {

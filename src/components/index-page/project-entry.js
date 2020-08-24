@@ -47,7 +47,7 @@ const Year = styled.span`
 
 const Description = styled.p`
   margin: 0;
-  padding-top : 25px;
+  padding-top : 1.25em;
 `
 
 export default function ProjectEntry({ title, year, image, link, description, tech }) {
