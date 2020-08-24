@@ -15,10 +15,16 @@ const HeaderBackground = styled(Background) `
 
 const LinkContainer = styled.div`
   display: flex;
+
+  @media (max-width: 600px) {
+    visibility: hidden;
+    width: 0;
+  }
 `
 
 const StyledLink = styled(Link)`
   padding 25px 25px;
+  visibility: inherit;
   font-size: 1.5em;
   white-space: nowrap;
   border-bottom: 2px solid transparent;
@@ -26,9 +32,11 @@ const StyledLink = styled(Link)`
     color 0.3s,
     border-color 0.2s,
     background 0.3s;
+
   &.current {
     border-bottom: 2px solid black;
   }
+
   &:hover {
     color: white;
     background: black;
