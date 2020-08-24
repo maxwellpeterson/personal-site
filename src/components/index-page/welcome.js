@@ -8,7 +8,7 @@ const WelcomeContent =  styled(Content)`
   padding: 0 25px;
 
   @media (max-height: 400px) {
-    justify-content: end;
+    justify-content: flex-end;
   }
 `
 
