@@ -13,7 +13,7 @@
     {
       "title": "Portfolio Site",
       "year": "2020",
-      "image": "./images/padded-icon.png",
+      "image": "./images/mp-logo-padded-transparent.png",
       "link": "https://github.com/maxwellpeterson/personal-site",
       "description": "This very website. My first time working with Gatsby and React.",
       "tech": ["Gatsby", "React", "Styled Components"]

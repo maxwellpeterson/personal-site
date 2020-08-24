@@ -3,6 +3,8 @@ module.exports = {
     title: "Max Peterson",
     description: "A personal website for Max Peterson.",
     author: "Max Peterson",
+    siteUrl: "https://maxpeterson.cc/",
+    image: "/mp-logo-padded-grey.png",
     pages: [
       {
         name: "Home",
@@ -32,7 +34,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`,
+        icon: `src/images/m-logo.png`,
       },
     },
   ],

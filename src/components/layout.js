@@ -28,15 +28,16 @@ export default function Layout({ page, children }) {
       header: allHeaderJson {
         edges {
           node {
+            logo {
+              childImageSharp {
+                fixed(height: 48, quality: 100) {
+                  ...GatsbyImageSharpFixed_tracedSVG
+                }
+              }
+            }
             links {
-              primary {
-                title
-                path
-              }
-              secondary {
-                title
-                path
-              }
+              title
+              path
             }
           }
         }
@@ -86,7 +87,7 @@ export default function Layout({ page, children }) {
         </title>
       </Helmet>
       <GlobalStyle />
-      <Header atTop={atTop} {...data.header.edges[0].node.links} />
+      <Header atTop={atTop} {...data.header.edges[0].node} />
       {children}
       <Footer {...data.footer.edges[0].node}/>
     </>

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 import Scrollspy from "react-scrollspy"
 import Background from "styles/components/background"
 import WideContent from "styles/components/wide-content"
@@ -13,7 +14,17 @@ const HeaderBackground = styled(Background) `
   z-index: 999;
 `
 
-const LinkContainer = styled.div`
+const HeaderContent = styled(WideContent)`
+  @media (min-width: 600px) {
+    justify-content: space-between;
+  }
+`
+
+const LogoLink = styled(Link)`
+  margin: 15px 25px;
+`
+
+const NavLinkContainer = styled.div`
   display: none;
 
   @media (min-width: 600px) {
@@ -21,7 +32,7 @@ const LinkContainer = styled.div`
   }
 `
 
-const StyledLink = styled(Link)`
+const NavLink = styled(Link)`
   padding 25px 25px;
   visibility: inherit;
   font-size: 1.5em;
@@ -42,21 +53,21 @@ const StyledLink = styled(Link)`
   }
 `
 
-export default function Header({ atTop, primary, secondary }) {
+export default function Header({ atTop, logo, links }) {
   return (
     <HeaderBackground atTop={atTop}>
-      <WideContent>
-        <StyledLink to={primary.path}>
-          {primary.title}
-        </StyledLink>
-        <Scrollspy items={secondary.map(link => link.title.toLowerCase())} currentClassName="current" componentTag={LinkContainer}>
-          {secondary.map(link => (
-            <StyledLink key={link.title} to={link.path}>
+      <HeaderContent>
+        <LogoLink to="/">
+          <Img fixed={logo.childImageSharp.fixed} />
+        </LogoLink>
+        <Scrollspy items={links.map(link => link.title.toLowerCase())} currentClassName="current" componentTag={NavLinkContainer}>
+          {links.map(link => (
+            <NavLink key={link.title} to={link.path}>
               {link.title}
-            </StyledLink>
+            </NavLink>
           ))}
         </Scrollspy>
-      </WideContent>
+      </HeaderContent>
     </HeaderBackground>
   )
 }

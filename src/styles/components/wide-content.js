@@ -1,10 +1,10 @@
 import styled from "styled-components"
 
 const WideContent = styled.div`
-  max-width: 1200px;
+  max-width: 1250px;
   flex: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `
 

@@ -1,18 +1,13 @@
 {
-  "links": {
-    "primary": {
-      "title": "Max Peterson",
-      "path": "/"
+  "logo": "./mp-logo.png",
+  "links": [
+    {
+      "title": "Projects",
+      "path": "/#projects"
     },
-    "secondary": [
-      {
-        "title": "Projects",
-        "path": "/#projects"
-      },
-      {
-        "title": "About",
-        "path": "/#about"
-      }
-    ]
-  }
+    {
+      "title": "About",
+      "path": "/#about"
+    }
+  ]
 }

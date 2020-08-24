@@ -8,7 +8,7 @@ const FooterBackground = styled(Background)`
 `
 
 const FooterContent = styled.div`
-  max-width: 1200px;
+  max-width: 1250px;
   width: 100%;
   padding: 50px 25px;
   display: grid;
