@@ -14,11 +14,10 @@ const HeaderBackground = styled(Background) `
 `
 
 const LinkContainer = styled.div`
-  display: flex;
+  display: none;
 
-  @media (max-width: 600px) {
-    visibility: hidden;
-    width: 0;
+  @media (min-width: 600px) {
+    display: flex;
   }
 `
 
