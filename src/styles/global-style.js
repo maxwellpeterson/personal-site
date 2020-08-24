@@ -7,12 +7,17 @@ export default createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    font-family: "Cooper Hewitt";
-    font-size: 20px;
-    font-weight: 300;
   }
 
   html {
+    font-family: "Cooper Hewitt";
+    font-size: 16px;
+    font-weight: 300;
+
+    @media (min-width: 400px) {
+      font-size: 20px;
+    }
+
     /* Not supported by Safari */
     scroll-behavior: smooth;
   }

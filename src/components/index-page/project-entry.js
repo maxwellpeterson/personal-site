@@ -38,7 +38,7 @@ const TitleContainer = styled.div`
 `
 
 const Title = styled.span`
-  font-size: 28px;
+  font-size: 1.5em;
 `
 
 const Year = styled.span`

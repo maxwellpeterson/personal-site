@@ -13,14 +13,14 @@ const FooterContent = styled.div`
   width: 100%;
   padding: 50px 25px;
   display: grid;
+  grid-auto-rows: 1fr;
+  grid-gap: 35px;
   justify-content: center;
   align-items: center;
-  grid-gap: 25px;
   
   @media (min-width: 600px) {
     grid-template-columns: auto auto;
     justify-content: space-between;
-    
   }
 `
 
@@ -34,9 +34,9 @@ const FlexContainer = styled.div`
 `
 
 const MediaLogo = styled(FontAwesomeIcon)`
-  margin: 8px;
+  margin: 0 8px;
   color: white;
-  font-size: 24px;
+  font-size: 1.25em;
   transition: color 0.2s;
   &:hover {
     color: ${props => props.color};

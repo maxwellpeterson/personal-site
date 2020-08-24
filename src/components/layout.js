@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import "@fortawesome/fontawesome-svg-core/styles.css"
+import { config } from "@fortawesome/fontawesome-svg-core"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faStrava, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
@@ -9,7 +10,10 @@ import Header from "components/header"
 import Footer from "components/footer"
 import GlobalStyle from "styles/global-style"
 
-/* These icons can now be accessed by string reference elsewhere. Could also import entire fab library... */
+/* In addition to manually importing style sheet above, fixes sixing bug when icons are being loaded... */
+config.autoAddCss = false
+
+/* These icons can now be accessed by string reference elsewhere. Useful for getting icon data from external source. Could also import entire fab library... */
 library.add(faPaperPlane, faLinkedinIn, faGithub, faStrava)
 
 export default function Layout({ page, children }) {

@@ -19,7 +19,7 @@ const LinkContainer = styled.div`
 
 const StyledLink = styled(Link)`
   padding 25px 25px;
-  font-size: 32px;
+  font-size: 1.5em;
   white-space: nowrap;
   border-bottom: 2px solid transparent;
   transition:
