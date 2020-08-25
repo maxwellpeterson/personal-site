@@ -1,7 +1,5 @@
-// Fixes sixing bug when icons are being loaded...
+import "./src/styles/fonts.css"
+// Fixes sizing bug when font awesome icons are being loaded...
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
-
-require("typeface-cooper-hewitt");
-require("typeface-roboto");

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Cooper Hewitt";
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+  src: url("./fonts/cooper-hewitt-300.woff2") format("woff2"),
+    url("./fonts/cooper-hewitt-300.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url("./fonts/roboto-latin-400.woff2") format("woff2"),
+    url("./fonts/roboto-latin-400.woff") format("woff");
+}
