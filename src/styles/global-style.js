@@ -15,6 +15,10 @@ export default createGlobalStyle`
     font-weight: 300;
 
     @media (min-width: 400px) {
+      font-size: 18px;
+    }
+
+    @media (min-width: 900px) {
       font-size: 20px;
     }
 
