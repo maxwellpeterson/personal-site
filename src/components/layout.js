@@ -42,6 +42,7 @@ export default function Layout({ page, children }) {
           node {
             text
             media {
+              title
               icon {
                 type
                 name

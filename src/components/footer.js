@@ -50,7 +50,7 @@ export default function Footer({ text, media }) {
         <LogoContainer>
           {media.map((item) => (
             <a
-              key={item.icon.name}
+              key={item.title}
               href={item.link}
               rel="noreferrer"
               target="_blank"
@@ -58,6 +58,7 @@ export default function Footer({ text, media }) {
               <MediaLogo
                 icon={[item.icon.type, item.icon.name]}
                 color={item.color}
+                alt={item.title}
               />
             </a>
           ))}
