@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const Content = styled.div`
+const Content = styled.section`
   padding: 125px 25px;
   max-width: 1000px;
   flex: auto;

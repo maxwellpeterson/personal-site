@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import Scrollspy from "react-scrollspy"
 import Background from "styles/components/background"
-import WideContent from "styles/components/wide-content"
 import IconString from "components/icon-string"
 
 const HeaderBackground = styled(Background)`
@@ -14,7 +13,13 @@ const HeaderBackground = styled(Background)`
   z-index: 999;
 `
 
-const HeaderContent = styled(WideContent)`
+const HeaderContent = styled.header`
+  max-width: 1250px;
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media (min-width: 600px) {
     justify-content: space-between;
   }
@@ -25,7 +30,7 @@ const LogoLink = styled(Link)`
   font-size: 2em;
 `
 
-const NavLinkContainer = styled.div`
+const NavLinkContainer = styled.nav`
   display: none;
 
   @media (min-width: 600px) {

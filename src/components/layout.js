@@ -81,7 +81,7 @@ export default function Layout({ page, children }) {
       </Helmet>
       <GlobalStyle />
       <Header atTop={atTop} {...data.header.edges[0].node} />
-      {children}
+      <main>{children}</main>
       <Footer {...data.footer.edges[0].node} />
     </>
   )

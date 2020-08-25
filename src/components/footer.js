@@ -7,7 +7,7 @@ const FooterBackground = styled(Background)`
   background-color: black;
 `
 
-const FooterContent = styled.div`
+const FooterContent = styled.footer`
   max-width: 1250px;
   width: 100%;
   padding: 50px 25px;
@@ -27,7 +27,7 @@ const Footnote = styled.p`
   color: white;
 `
 
-const FlexContainer = styled.div`
+const LogoContainer = styled.nav`
   display: flex;
   justify-content: center;
 `
@@ -47,7 +47,7 @@ export default function Footer({ text, media }) {
     <FooterBackground>
       <FooterContent>
         <Footnote>{text}</Footnote>
-        <FlexContainer>
+        <LogoContainer>
           {media.map((item) => (
             <a
               key={item.icon.name}
@@ -61,7 +61,7 @@ export default function Footer({ text, media }) {
               />
             </a>
           ))}
-        </FlexContainer>
+        </LogoContainer>
       </FooterContent>
     </FooterBackground>
   )
