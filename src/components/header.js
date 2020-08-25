@@ -22,6 +22,7 @@ const HeaderContent = styled(WideContent)`
 
 const LogoLink = styled(Link)`
   margin: 15px 25px;
+  font-size: 2em;
 `
 
 const NavLinkContainer = styled.div`
@@ -57,7 +58,7 @@ export default function Header({ atTop, logo, links }) {
     <HeaderBackground atTop={atTop}>
       <HeaderContent>
         <LogoLink to="/">
-          <IconString string={logo.text} colors={logo.colors} size={40} />
+          <IconString string={logo.text} colors={logo.colors} />
         </LogoLink>
         <Scrollspy items={links.map(link => link.title.toLowerCase())} currentClassName="current" componentTag={NavLinkContainer}>
           {links.map(link => (
