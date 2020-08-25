@@ -8,6 +8,11 @@ const Container = styled.div`
   grid-gap: ${props => (props.size / 14) + "px"};
 `
 
+const Space = styled.div`
+  width: ${props => (props.size / 4) + "px"};
+  height: ${props => props.size + "px"};
+`
+
 const Circle = styled.div`
   width: ${props => props.size + "px"};
   height: ${props => props.size + "px"};
@@ -26,11 +31,18 @@ const Circle = styled.div`
 export default function IconString( { string, colors, size }) {
   return (
     <Container size={size}>
-      {string.split("").map((letter, index) => (
-        <Circle key={string.substring(index)} color={colors[index]} size={size}>
-          {letter}
-        </Circle>
-      ))}
+      {string.split("").map((character, index) => {
+        let key = string.substring(index)
+        if (character === " ") {
+          return <Space key={key} size={size} />
+        } else {
+          return (
+            <Circle key={key} color={colors[index]} size={size}>
+              {character}
+            </Circle>
+          )
+        }
+      })}
     </Container>
   )
 }
