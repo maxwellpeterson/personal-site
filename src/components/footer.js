@@ -56,9 +56,9 @@ export default function Footer({ text, media }) {
               target="_blank"
             >
               <MediaLogo
+                title={item.title}
                 icon={[item.icon.type, item.icon.name]}
                 color={item.color}
-                alt={item.title}
               />
             </a>
           ))}
