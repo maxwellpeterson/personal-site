@@ -36,7 +36,8 @@
     "react-scrollspy": "^3.4.3",
     "styled-components": "^5.1.1",
     "styled-normalize": "^8.0.7",
-    "typeface-cooper-hewitt": "0.0.44"
+    "typeface-cooper-hewitt": "0.0.44",
+    "typeface-roboto": "0.0.75"
   },
   "devDependencies": {
     "prettier": "2.0.5"

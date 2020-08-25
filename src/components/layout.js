@@ -28,13 +28,6 @@ export default function Layout({ page, children }) {
       header: allHeaderJson {
         edges {
           node {
-            logo {
-              childImageSharp {
-                fixed(height: 48, quality: 100) {
-                  ...GatsbyImageSharpFixed_tracedSVG
-                }
-              }
-            }
             links {
               title
               path

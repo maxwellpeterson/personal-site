@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import Scrollspy from "react-scrollspy"
 import Background from "styles/components/background"
 import WideContent from "styles/components/wide-content"
+import IconString from "components/icon-string"
 
 const HeaderBackground = styled(Background) `
   background: rgba(255, 255, 255, 0.8);
@@ -53,12 +54,12 @@ const NavLink = styled(Link)`
   }
 `
 
-export default function Header({ atTop, logo, links }) {
+export default function Header({ atTop, links }) {
   return (
     <HeaderBackground atTop={atTop}>
       <HeaderContent>
         <LogoLink to="/">
-          <Img fixed={logo.childImageSharp.fixed} />
+          <IconString string="MP" colors={["#01864f", "#00519b"]} size={48} />
         </LogoLink>
         <Scrollspy items={links.map(link => link.title.toLowerCase())} currentClassName="current" componentTag={NavLinkContainer}>
           {links.map(link => (
