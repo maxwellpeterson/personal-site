@@ -1,4 +1,11 @@
 {
+  "logo": {
+    "text": "MP",
+    "colors": [
+      "#01864f",
+      "#00519b"
+    ]
+  },
   "links": [
     {
       "title": "Projects",

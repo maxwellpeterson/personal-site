@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
 import Scrollspy from "react-scrollspy"
 import Background from "styles/components/background"
 import WideContent from "styles/components/wide-content"
@@ -35,7 +34,6 @@ const NavLinkContainer = styled.div`
 
 const NavLink = styled(Link)`
   padding 25px 25px;
-  visibility: inherit;
   font-size: 1.5em;
   white-space: nowrap;
   border-bottom: 2px solid transparent;
@@ -54,12 +52,12 @@ const NavLink = styled(Link)`
   }
 `
 
-export default function Header({ atTop, links }) {
+export default function Header({ atTop, logo, links }) {
   return (
     <HeaderBackground atTop={atTop}>
       <HeaderContent>
         <LogoLink to="/">
-          <IconString string="MP" colors={["#01864f", "#00519b"]} size={48} />
+          <IconString string={logo.text} colors={logo.colors} size={40} />
         </LogoLink>
         <Scrollspy items={links.map(link => link.title.toLowerCase())} currentClassName="current" componentTag={NavLinkContainer}>
           {links.map(link => (

@@ -28,6 +28,10 @@ export default function Layout({ page, children }) {
       header: allHeaderJson {
         edges {
           node {
+            logo {
+              text
+              colors
+            }
             links {
               title
               path
