@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Background from "styles/components/background"
 import Content from "styles/components/content"
 
-const WelcomeContent =  styled(Content)`
+const WelcomeContent = styled(Content)`
   height: 100vh;
   padding: 0 25px;
 
@@ -21,10 +21,8 @@ export default function Welcome({ greeting }) {
   return (
     <Background>
       <WelcomeContent>
-        {greeting.map(msg => (
-          <StyledMessage key={msg}>
-            {msg}
-          </StyledMessage>
+        {greeting.map((msg) => (
+          <StyledMessage key={msg}>{msg}</StyledMessage>
         ))}
       </WelcomeContent>
     </Background>

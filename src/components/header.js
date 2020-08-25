@@ -6,9 +6,9 @@ import Background from "styles/components/background"
 import WideContent from "styles/components/wide-content"
 import IconString from "components/icon-string"
 
-const HeaderBackground = styled(Background) `
+const HeaderBackground = styled(Background)`
   background: rgba(255, 255, 255, 0.8);
-  ${props => props.atTop || "box-shadow: 0 0 15px 5px #D6D6D6"};
+  ${(props) => props.atTop || "box-shadow: 0 0 15px 5px #D6D6D6"};
   transition: box-shadow 0.2s;
   position: fixed;
   z-index: 999;
@@ -60,8 +60,12 @@ export default function Header({ atTop, logo, links }) {
         <LogoLink to="/">
           <IconString string={logo.text} colors={logo.colors} />
         </LogoLink>
-        <Scrollspy items={links.map(link => link.title.toLowerCase())} currentClassName="current" componentTag={NavLinkContainer}>
-          {links.map(link => (
+        <Scrollspy
+          items={links.map((link) => link.title.toLowerCase())}
+          currentClassName="current"
+          componentTag={NavLinkContainer}
+        >
+          {links.map((link) => (
             <NavLink key={link.title} to={link.path}>
               {link.title}
             </NavLink>

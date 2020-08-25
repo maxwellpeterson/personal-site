@@ -16,14 +16,10 @@ export default function Projects({ title, description, projects }) {
   return (
     <Background id={title.toLowerCase()}>
       <Content>
-        <SectionTitle>
-          {title}
-        </SectionTitle>
-        <SectionSubtitle>
-          {description}
-        </SectionSubtitle>
+        <SectionTitle>{title}</SectionTitle>
+        <SectionSubtitle>{description}</SectionSubtitle>
         <ProjectPanelContainer>
-          {projects.map(project => (
+          {projects.map((project) => (
             <ProjectEntry key={project.title} {...project} />
           ))}
         </ProjectPanelContainer>

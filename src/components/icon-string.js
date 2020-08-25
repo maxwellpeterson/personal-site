@@ -19,7 +19,7 @@ const Circle = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 0.5em;
-  background: ${props => props.color || "black"};
+  background: ${(props) => props.color || "black"};
 `
 const Letter = styled.span`
   font-family: "Roboto";
@@ -30,7 +30,7 @@ const Letter = styled.span`
 
 // Icon size is controlled by font size of parent element
 
-export default function IconString( { string, colors }) {
+export default function IconString({ string, colors }) {
   return (
     <Container>
       {string.split("").map((character, index) => {
@@ -40,9 +40,7 @@ export default function IconString( { string, colors }) {
         } else {
           return (
             <Circle key={key} color={colors[index]}>
-              <Letter>
-                {character}
-              </Letter>
+              <Letter>{character}</Letter>
             </Circle>
           )
         }

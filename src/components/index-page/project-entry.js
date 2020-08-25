@@ -8,7 +8,7 @@ const EntryContainer = styled.div`
   border: 1px solid black;
   transition: all 0.3s;
   &:hover {
-    box-shadow: 0 0 15px 3px #D6D6D6
+    box-shadow: 0 0 15px 3px #d6d6d6;
   }
 `
 
@@ -41,16 +41,21 @@ const Title = styled.span`
   font-size: 1.5em;
 `
 
-const Year = styled.span`
-
-`
+const Year = styled.span``
 
 const Description = styled.p`
   margin: 0;
-  padding-top : 1.25em;
+  padding-top: 1.25em;
 `
 
-export default function ProjectEntry({ title, year, image, link, description, tech }) {
+export default function ProjectEntry({
+  title,
+  year,
+  image,
+  link,
+  description,
+  tech,
+}) {
   return (
     <a href={link} rel="noreferrer" target="_blank">
       <EntryContainer>
@@ -60,20 +65,12 @@ export default function ProjectEntry({ title, year, image, link, description, te
         <TextContainer>
           <div>
             <TitleContainer>
-              <Title>
-                {title}
-              </Title>
-              <Year>
-                {year}
-              </Year>
+              <Title>{title}</Title>
+              <Year>{year}</Year>
             </TitleContainer>
-            <Description>
-              {description}
-            </Description>
+            <Description>{description}</Description>
           </div>
-          <Description>
-            {tech.join(" + ")}
-          </Description>
+          <Description>{tech.join(" + ")}</Description>
         </TextContainer>
       </EntryContainer>
     </a>

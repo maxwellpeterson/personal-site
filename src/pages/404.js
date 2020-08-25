@@ -23,12 +23,8 @@ export default function PageNotFound() {
     <Layout page="404">
       <Background>
         <MessageContent>
-          <StyledHeading>
-            404
-          </StyledHeading>
-          <StyledMessage>
-            Page Not Found
-          </StyledMessage>
+          <StyledHeading>404</StyledHeading>
+          <StyledMessage>Page Not Found</StyledMessage>
         </MessageContent>
       </Background>
     </Layout>

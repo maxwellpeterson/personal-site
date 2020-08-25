@@ -15,29 +15,25 @@ const AboutContainer = styled.div`
 `
 
 const ProfileImage = styled(Img)`
-  box-shadow: 0 0 10px 3px #D6D6D6;
+  box-shadow: 0 0 10px 3px #d6d6d6;
 `
 
 const Text = styled.div`
   display: grid;
   align-content: center;
-  grid-gap: 15px
+  grid-gap: 15px;
 `
 
 export default function About({ title, image, description }) {
   return (
     <Background id={title.toLowerCase()}>
       <Content>
-        <SectionTitle>
-          {title}
-        </SectionTitle>
+        <SectionTitle>{title}</SectionTitle>
         <AboutContainer>
           <ProfileImage fluid={image.childImageSharp.fluid} />
           <Text>
-            {description.map(text => (
-              <p key={text.slice(0, 25)}>
-                {text}
-              </p>
+            {description.map((text) => (
+              <p key={text.slice(0, 25)}>{text}</p>
             ))}
           </Text>
         </AboutContainer>

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Background from "styles/components/background"
 
 const FooterBackground = styled(Background)`
@@ -16,7 +16,7 @@ const FooterContent = styled.div`
   grid-gap: 35px;
   justify-content: center;
   align-items: center;
-  
+
   @media (min-width: 600px) {
     grid-template-columns: auto auto;
     justify-content: space-between;
@@ -38,7 +38,7 @@ const MediaLogo = styled(FontAwesomeIcon)`
   font-size: 1.25em;
   transition: color 0.2s;
   &:hover {
-    color: ${props => props.color};
+    color: ${(props) => props.color};
   }
 `
 
@@ -46,13 +46,19 @@ export default function Footer({ text, media }) {
   return (
     <FooterBackground>
       <FooterContent>
-        <Footnote>
-          {text}
-        </Footnote>
+        <Footnote>{text}</Footnote>
         <FlexContainer>
-          {media.map(item => (
-            <a key={item.icon.name} href={item.link} rel="noreferrer" target="_blank">
-              <MediaLogo icon={[item.icon.type, item.icon.name]} color={item.color} />
+          {media.map((item) => (
+            <a
+              key={item.icon.name}
+              href={item.link}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <MediaLogo
+                icon={[item.icon.type, item.icon.name]}
+                color={item.color}
+              />
             </a>
           ))}
         </FlexContainer>
