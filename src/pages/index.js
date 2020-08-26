@@ -7,7 +7,7 @@ import About from "components/index-page/about"
 
 export default function Home({ data }) {
   return (
-    <Layout page="Home">
+    <Layout>
       <Welcome {...data.welcome.edges[0].node} />
       <Projects {...data.projects.edges[0].node} />
       <About {...data.about.edges[0].node} />

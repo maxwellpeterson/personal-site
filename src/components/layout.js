@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 import {
@@ -8,14 +7,15 @@ import {
   faStrava,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons"
+import SEO from "components/seo"
+import GlobalStyle from "styles/global-style"
 import Header from "components/header"
 import Footer from "components/footer"
-import GlobalStyle from "styles/global-style"
 
 // These icons can now be accessed by string reference elsewhere. Useful for getting icon data from external source. Could also import entire fab library...
 library.add(faPaperPlane, faLinkedinIn, faGithub, faStrava)
 
-export default function Layout({ page, children }) {
+export default function Layout({ title, description, image, children }) {
   const data = useStaticQuery(graphql`
     query LayoutQuery {
       site {
@@ -77,9 +77,7 @@ export default function Layout({ page, children }) {
 
   return (
     <>
-      <Helmet>
-        <title>{page + " | " + data.site.siteMetadata.title}</title>
-      </Helmet>
+      <SEO title={title} description={description} image={image} />
       <GlobalStyle />
       <Header atTop={atTop} {...data.header.edges[0].node} />
       <main>{children}</main>

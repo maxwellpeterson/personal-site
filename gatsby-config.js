@@ -1,16 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: "Max Peterson",
-    description: "A personal website for Max Peterson.",
-    author: "Max Peterson",
-    siteUrl: "https://maxpeterson.cc/",
+    title:
+      "Max Peterson | Computer Science Undergraduate at Northeastern University",
+    description:
+      "I'm an undergraduate student from San Francisco, CA studying computer science at Northeastern University in Boston, MA. This is a portfolio for some of the projects I've worked on.",
     image: "/mp-logo-padded-grey.png",
-    pages: [
-      {
-        name: "Home",
-        route: "/",
-      },
-    ],
+    url: "https://maxpeterson.cc",
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -28,7 +23,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Max Peterson`,
+        name: `Max Peterson | Computer Science Undergraduate at Northeastern University`,
         short_name: `Max Peterson`,
         start_url: `/`,
         background_color: `#ffffff`,
