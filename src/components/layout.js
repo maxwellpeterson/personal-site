@@ -18,11 +18,6 @@ library.add(faPaperPlane, faLinkedinIn, faGithub, faStrava)
 export default function Layout({ title, description, image, children }) {
   const data = useStaticQuery(graphql`
     query LayoutQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
       header: allHeaderJson {
         edges {
           node {
