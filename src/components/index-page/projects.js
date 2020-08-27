@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import Background from "styles/components/background"
 import Content from "styles/components/content"
@@ -12,7 +13,7 @@ const ProjectPanelContainer = styled.div`
   grid-gap: 30px;
 `
 
-export default function Projects({ title, description, projects }) {
+const Projects = ({ title, description, projects }) => {
   return (
     <Background id={title.toLowerCase()}>
       <Content>
@@ -27,3 +28,15 @@ export default function Projects({ title, description, projects }) {
     </Background>
   )
 }
+
+Projects.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  projects: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+}
+
+export default Projects

@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import Background from "styles/components/background"
@@ -24,7 +25,7 @@ const Text = styled.div`
   grid-gap: 15px;
 `
 
-export default function About({ title, image, description }) {
+const About = ({ title, image, description }) => {
   return (
     <Background id={title.toLowerCase()}>
       <Content>
@@ -41,3 +42,11 @@ export default function About({ title, image, description }) {
     </Background>
   )
 }
+
+About.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
+  description: PropTypes.arrayOf(PropTypes.string).isRequired,
+}
+
+export default About

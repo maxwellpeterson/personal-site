@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Background from "styles/components/background"
@@ -42,7 +43,7 @@ const MediaLogo = styled(FontAwesomeIcon)`
   }
 `
 
-export default function Footer({ text, media }) {
+const Footer = ({ text, media }) => {
   return (
     <FooterBackground>
       <FooterContent>
@@ -67,3 +68,20 @@ export default function Footer({ text, media }) {
     </FooterBackground>
   )
 }
+
+Footer.propTypes = {
+  text: PropTypes.string.isRequired,
+  media: PropTypes.arrayOf(
+    PropTypes.exact({
+      title: PropTypes.string.isRequired,
+      icon: PropTypes.exact({
+        type: PropTypes.oneOf(["fas", "fab"]).isRequired,
+        name: PropTypes.string.isRequired,
+      }).isRequired,
+      color: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+}
+
+export default Footer

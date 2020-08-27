@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -30,7 +31,7 @@ const Letter = styled.span`
 
 // Icon size is controlled by font size of parent element
 
-export default function IconString({ string, colors }) {
+const IconString = ({ string, colors }) => {
   return (
     <Container>
       {string.split("").map((character, index) => {
@@ -48,3 +49,14 @@ export default function IconString({ string, colors }) {
     </Container>
   )
 }
+
+IconString.propTypes = {
+  string: PropTypes.string.isRequired,
+  colors: PropTypes.arrayOf(PropTypes.string), // Optional, defaults to black background
+}
+
+IconString.defaultProps = {
+  colors: [],
+}
+
+export default IconString

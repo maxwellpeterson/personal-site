@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Scrollspy from "react-scrollspy"
@@ -58,7 +59,7 @@ const NavLink = styled(Link)`
   }
 `
 
-export default function Header({ atTop, logo, links }) {
+const Header = ({ atTop, logo, links }) => {
   return (
     <HeaderBackground atTop={atTop}>
       <HeaderContent>
@@ -80,3 +81,19 @@ export default function Header({ atTop, logo, links }) {
     </HeaderBackground>
   )
 }
+
+Header.propTypes = {
+  atTop: PropTypes.bool.isRequired,
+  logo: PropTypes.exact({
+    text: PropTypes.string.isRequired,
+    colors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+  links: PropTypes.arrayOf(
+    PropTypes.exact({
+      title: PropTypes.string.isRequired,
+      path: PropTypes.string.isRequired,
+    }).isRequired
+  ),
+}
+
+export default Header

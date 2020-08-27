@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import Background from "styles/components/background"
 import Content from "styles/components/content"
@@ -17,7 +18,7 @@ const StyledMessage = styled.p`
   font-size: 1.6em;
 `
 
-export default function Welcome({ greeting }) {
+const Welcome = ({ greeting }) => {
   return (
     <Background>
       <WelcomeContent>
@@ -28,3 +29,9 @@ export default function Welcome({ greeting }) {
     </Background>
   )
 }
+
+Welcome.propTypes = {
+  greeting: PropTypes.arrayOf(PropTypes.string).isRequired,
+}
+
+export default Welcome

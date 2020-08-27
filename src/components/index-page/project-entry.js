@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
@@ -48,14 +49,7 @@ const Description = styled.p`
   padding-top: 1.25em;
 `
 
-export default function ProjectEntry({
-  title,
-  year,
-  image,
-  link,
-  description,
-  tech,
-}) {
+const ProjectEntry = ({ title, year, image, link, description, tech }) => {
   return (
     <a href={link} rel="noreferrer" target="_blank">
       <EntryContainer>
@@ -76,3 +70,14 @@ export default function ProjectEntry({
     </a>
   )
 }
+
+ProjectEntry.propTypes = {
+  title: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
+  link: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  tech: PropTypes.arrayOf(PropTypes.string).isRequired,
+}
+
+export default ProjectEntry
