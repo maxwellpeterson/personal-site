@@ -1,20 +1,10 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"
-import {
-  faGithub,
-  faStrava,
-  faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons"
 import SEO from "components/seo"
 import GlobalStyle from "styles/global-style"
 import Header from "components/header"
 import Footer from "components/footer"
-
-// These icons can now be accessed by string reference elsewhere. Could also import/add the entire fas/fab libraries to make external content independent of these specific imports.
-library.add(faPaperPlane, faLinkedinIn, faGithub, faStrava)
 
 const Layout = ({ title, description, image, children }) => {
   const data = useStaticQuery(graphql`
