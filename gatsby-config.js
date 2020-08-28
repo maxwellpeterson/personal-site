@@ -3,7 +3,7 @@ module.exports = {
     title: "Max Peterson | CS Student at Northeastern University",
     description:
       "I'm an undergraduate student from San Francisco, CA studying computer science at Northeastern University in Boston, MA. This is a portfolio for some of the projects I've worked on.",
-    image: "/full-logo.png",
+    image: "/mp-logo.png",
     url: "https://maxpeterson.cc",
   },
   plugins: [
