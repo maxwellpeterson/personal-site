@@ -43,6 +43,7 @@ export const query = graphql`
             description
             tech
           }
+          footnote
         }
       }
     }

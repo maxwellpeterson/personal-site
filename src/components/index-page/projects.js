@@ -13,7 +13,11 @@ const ProjectPanelContainer = styled.div`
   grid-gap: 30px;
 `
 
-const Projects = ({ title, description, projects }) => {
+const Footnote = styled.p`
+  padding-top: 35px;
+`
+
+const Projects = ({ title, description, projects, footnote }) => {
   return (
     <Background id={title.toLowerCase()}>
       <Content>
@@ -24,6 +28,7 @@ const Projects = ({ title, description, projects }) => {
             <ProjectEntry key={project.title} {...project} />
           ))}
         </ProjectPanelContainer>
+        <Footnote>{footnote}</Footnote>
       </Content>
     </Background>
   )
@@ -37,6 +42,7 @@ Projects.propTypes = {
       title: PropTypes.string.isRequired,
     })
   ).isRequired,
+  footnote: PropTypes.string.isRequired,
 }
 
 export default Projects

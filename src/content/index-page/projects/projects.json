@@ -7,7 +7,7 @@
       "year": "2020",
       "image": "./images/cole-valley-grid.png",
       "link": "https://github.com/maxwellpeterson/",
-      "description": "Short description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "description": "An exporation of the patterns woven into street networks around the world. Currently in the very early stages of development.",
       "tech": ["Python", "OSMNX"]
     },
     {
@@ -15,7 +15,7 @@
       "year": "2020",
       "image": "./images/mp-logo-padded-transparent.png",
       "link": "https://github.com/maxwellpeterson/personal-site",
-      "description": "This very website. My first time working with Gatsby and React.",
+      "description": "This very website. My first time working with a modern front-end web stack, and a fun design exercise.",
       "tech": ["Gatsby", "React", "Styled Components"]
     },
     {
@@ -23,8 +23,9 @@
       "year": "2020",
       "image": "./images/big-bang.png",
       "link": "https://github.com/maxwellpeterson/",
-      "description": "An interactive desktop animation program built with MVC architecture. Completed for CS 3500 Object-Oriented Design. Per Northeastern policy, this code is kept in a private repository.",
+      "description": "An interactive desktop animation program written in Java using MVC architecture. Developed with Alex Lian for CS 3500 Object-Oriented Design.",
       "tech": ["Java", "MVC", "Swing"]
     }
-  ]
+  ],
+  "footnote": "Per Northeastern policy, course projects are kept in a private repository, and available upon request."
 }
