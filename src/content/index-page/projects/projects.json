@@ -3,12 +3,12 @@
   "description": "Things I’ve developed on my own, plus a few of my larger course projects.",
   "projects": [
     {
-      "title": "Urban Geometry",
+      "title": "ArchMap",
       "year": "2020",
       "image": "./images/cole-valley-grid.png",
       "link": "https://github.com/maxwellpeterson/",
-      "description": "An exporation of the patterns woven into street networks around the world. Currently in the very early stages of development.",
-      "tech": ["Python", "OSMNX"]
+      "description": "A map-based web (and eventually mobile) app for exploring local architecture. Currently in the early stages of development.",
+      "tech": ["TBD"]
     },
     {
       "title": "Portfolio Site",
