@@ -12,6 +12,6 @@ I was learning how to build this site as I was actually building it. I didn't st
 
 After putting together a simplified home page, I started working with [GraphQL](https://graphql.org/) to separate the site content from the front-facing code. Moving forward, this made additions and updates to the written sections of the site super easy. By this point, I was happy with the desktop version of the site, and deployed with [Vercel](https://vercel.com/). From there, I focused on making my layouts more responsive, and improving search engine optimization.
 
-## Improvements
+## Improvement
 
 Eventually I would like to add dedicated pages for explaining some of my larger projects, instead of just linking them to a GitHub repository. Adding a dark theme would also be a good design update.
