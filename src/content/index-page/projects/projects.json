@@ -23,7 +23,7 @@
       "year": "2020",
       "image": "./images/big-bang.png",
       "link": "https://github.com/maxwellpeterson/",
-      "description": "An interactive desktop animation program written in Java using MVC architecture. Developed with a partner for CS 3500 Object-Oriented Design.",
+      "description": "An interactive desktop animation program written in Java using MVC architecture. Developed with a partner for Object-Oriented Design.",
       "tech": ["Java", "MVC", "Swing"]
     }
   ],
