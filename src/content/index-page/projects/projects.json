@@ -14,7 +14,7 @@
       "title": "Portfolio Site",
       "year": "2020",
       "image": "./images/mp-logo-padded-transparent.png",
-      "link": "https://github.com/maxwellpeterson/personal-site",
+      "link": "https://github.com/maxwellpeterson/maxpeterson.cc",
       "description": "This very website. My first time working with a modern front-end web stack, and a fun design exercise.",
       "tech": ["Gatsby", "React", "Styled Components"]
     },
