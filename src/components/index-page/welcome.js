@@ -6,7 +6,8 @@ import Content from "styles/components/content"
 
 const WelcomeContent = styled(Content)`
   height: 100vh;
-  padding: 0 25px;
+  grid-gap: 2.5em;
+  align-content: center;
 
   @media (max-height: 400px) {
     justify-content: flex-end;
@@ -14,7 +15,6 @@ const WelcomeContent = styled(Content)`
 `
 
 const StyledMessage = styled.p`
-  padding: 0.75em 0;
   font-size: 1.6em;
 `
 

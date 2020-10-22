@@ -1,12 +1,11 @@
 import styled from "styled-components"
 
 const Content = styled.section`
-  padding: 125px 25px;
+  padding: 25px;
   max-width: 1000px;
   flex: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-gap: 35px;
 `
 
 export default Content
