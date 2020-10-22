@@ -5,13 +5,14 @@ import Background from "styles/components/background"
 import Content from "styles/components/content"
 
 const MessageContent = styled(Content)`
-  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
   height: 100vh;
 `
 
 const StyledHeading = styled.span`
   font-size: 4em;
-  padding-bottom: 0.5em;
 `
 
 const StyledMessage = styled.span`
