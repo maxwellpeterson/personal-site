@@ -9,13 +9,13 @@ const MessageContent = styled(Content)`
   height: 100vh;
 `
 
-const StyledHeading = styled.p`
-  margin: 20px auto;
-  font-size: 96px;
+const StyledHeading = styled.span`
+  font-size: 4em;
+  padding-bottom: 0.5em;
 `
 
-const StyledMessage = styled(StyledHeading)`
-  font-size: 48px;
+const StyledMessage = styled.span`
+  font-size: 2em;
 `
 
 export default function PageNotFound() {
