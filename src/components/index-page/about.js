@@ -21,8 +21,7 @@ const ProfileImage = styled(Img)`
 
 const Text = styled.div`
   display: grid;
-  align-content: center;
-  grid-gap: 15px;
+  grid-gap: 0.75em;
 `
 
 const About = ({ title, image, description }) => {
