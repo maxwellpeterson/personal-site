@@ -5,6 +5,7 @@ import Background from "styles/components/background"
 import Content from "styles/components/content"
 
 const MessageContent = styled(Content)`
+  margin-bottom: 0;
   justify-items: center;
   justify-content: center;
   align-content: center;
