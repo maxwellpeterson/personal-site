@@ -10,7 +10,7 @@ const WelcomeContent = styled(Content)`
   align-content: center;
 
   @media (max-height: 400px) {
-    justify-content: flex-end;
+    align-content: end;
   }
 `
 
